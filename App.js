@@ -12,6 +12,7 @@ import NoteAdd from './components/NoteAdd';
 import Detail from './components/Detail';
 import AddAppointment from "./components/AppointmentBooking/AddAppointment";
 import ViewAppointment from "./components/AppointmentBooking/ViewAppointment";
+import UpdateAppointment from "./components/AppointmentBooking/UpdateAppointment";
 
 const stack = createStackNavigator();
 
@@ -147,17 +148,17 @@ function App() {
         }}
       />
 
-      {/* <stack.Screen
-        component={Detail}
+      <stack.Screen
+        component={UpdateAppointment}
         name="updateAppointments"
         options={{
-          headerTitle: () => <Header name="Edit books" />,
+          headerTitle: () => <Header name="Edit Appointment" />,
           headerStyle: {
             backgroundColor: "#4c00b0",
             height: 150,
           },
         }}
-      /> */}
+      />
     </stack.Navigator>
   );
 

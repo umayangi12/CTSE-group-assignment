@@ -37,9 +37,15 @@ const ViewAppointment = () => {
               }
             >
               <Text style={styles.patientTite}>Title:{item.PatientTitle}</Text>
-              <Text style={styles.patientName}>Patient Name:{item.PatientName}</Text>
-              <Text style={styles.patientPhone}>Mobile:{item.PatientPhone}</Text>
-              <Text style={styles.patientnic}>NIC/Passort:{item.Patientnic}</Text>
+              <Text style={styles.patientName}>
+                Patient Name:{item.PatientName}
+              </Text>
+              <Text style={styles.patientPhone}>
+                Mobile:{item.PatientPhone}
+              </Text>
+              <Text style={styles.patientnic}>
+                NIC/Passort:{item.Patientnic}
+              </Text>
               <Text style={styles.patientArea}>Area:{item.PatientArea}</Text>
             </Pressable>
           </View>
