@@ -1,6 +1,6 @@
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import React, { useState } from "react";
-import { firebase } from "../config";
+import { firebase } from "../../config";
 import { Keyboard, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -60,31 +60,31 @@ const AddAppointment = () => {
     <View style={styles.container}>
       <TextInput
         placeholder="Title"
-        value={bookName}
+        value={patientTite}
         onChangeText={(e) => setPatientTite(e)}
         style={styles.inputTitle}
       />
       <TextInput
         placeholder="Patient Name *"
-        value={author}
+        value={patientName}
         onChangeText={(e) => setPatientName(e)}
         style={styles.inputTitle}
       />
       <TextInput
         placeholder="Telephone No *"
-        value={price}
+        value={patientPhone}
         onChangeText={(e) => setPatientPhone(e)}
         style={styles.inputTitle}
       />
       <TextInput
         placeholder="NIC/Passport No *"
-        value={price}
+        value={patientnic}
         onChangeText={(e) => setPatientnic(e)}
         style={styles.inputTitle}
       />
       <TextInput
         placeholder="Area"
-        value={price}
+        value={patientArea}
         onChangeText={(e) => setPatientArea(e)}
         style={styles.inputTitle}
       />

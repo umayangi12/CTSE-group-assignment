@@ -10,6 +10,8 @@ import Header from "./components/Header";
 import Home from './components/Home';
 import NoteAdd from './components/NoteAdd';
 import Detail from './components/Detail';
+import AddAppointment from "./components/AppointmentBooking/AddAppointment";
+import ViewAppointment from "./components/AppointmentBooking/ViewAppointment";
 
 const stack = createStackNavigator();
 
@@ -72,56 +74,91 @@ function App() {
 
   return (
     <stack.Navigator>
-        <stack.Screen
-          name="Dashboard"
-          component={Dashboard}
-          options={{
-            headerTitle: () => <Header name="Dashboard" />,
-            headerStyle: {
-              height: 150,
-              borderBottomLeftRadius: 50,
-              borderBottomRightRadius: 50,
-              backgroundColor: "#00e4d0",
-              shadowColor: "#000",
-              elevation: 25,
-            },
-          }}
-        />
-         <stack.Screen
-          component={Home}
-          name='Home'
-          options={{
-            headerTitle:()=><Header name="Books"/>,
-            headerStyle:{
-              backgroundColor:'#4c00b0',
-              height:150,
-            }
-          }}
-        />
-        <stack.Screen
-          component={NoteAdd}
-          name='AddBook'
-          options={{
-            headerTitle:()=><Header name="Add book"/>,
-            headerStyle:{
-              backgroundColor:'#4c00b0',
-              height:150,
-            }
-          }}
-        />
-        <stack.Screen
-          component={Detail}
-          name='updateBooks'
-          options={{
-            headerTitle:()=><Header name="Edit books"/>,
-            headerStyle:{
-              backgroundColor:'#4c00b0',
-              height:150,
-            }
-          }}
-        />
-        </stack.Navigator>
-        
+      <stack.Screen
+        name="Dashboard"
+        component={Dashboard}
+        options={{
+          headerTitle: () => <Header name="Dashboard" />,
+          headerStyle: {
+            height: 150,
+            borderBottomLeftRadius: 50,
+            borderBottomRightRadius: 50,
+            backgroundColor: "#00e4d0",
+            shadowColor: "#000",
+            elevation: 25,
+          },
+        }}
+      />
+      <stack.Screen
+        component={Home}
+        name="Home"
+        options={{
+          headerTitle: () => <Header name="Books" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={NoteAdd}
+        name="AddBook"
+        options={{
+          headerTitle: () => <Header name="Add book" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={Detail}
+        name="updateBooks"
+        options={{
+          headerTitle: () => <Header name="Edit books" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+
+      <stack.Screen
+        component={ViewAppointment}
+        name="ViewAppointment"
+        options={{
+          headerTitle: () => <Header name="Appointments" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+
+      <stack.Screen
+        component={AddAppointment}
+        name="AddAppointment"
+        options={{
+          headerTitle: () => <Header name="Add Appointment" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+
+      {/* <stack.Screen
+        component={Detail}
+        name="updateAppointments"
+        options={{
+          headerTitle: () => <Header name="Edit books" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      /> */}
+    </stack.Navigator>
   );
 
 }
