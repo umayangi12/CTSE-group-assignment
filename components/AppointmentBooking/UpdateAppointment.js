@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { firebase } from "../../config";
 import { useNavigation } from "@react-navigation/native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { Alert } from "react-native";
 
 const UpdateAppointment = ({ route }) => {
   const navigation = useNavigation();
@@ -28,11 +29,10 @@ const UpdateAppointment = ({ route }) => {
           PatientArea: patientArea,
         })
         .then(() => {
+          Alert.alert("Appointment Updated Successfully!");
           navigation.navigate("ViewAppointment");
         })
-        .catch((error) => {
-          alert(error);
-        });
+        .catch((e) => alert(e));
     }
   };
 
@@ -41,11 +41,10 @@ const UpdateAppointment = ({ route }) => {
     Appointments.doc(route.params.item.key)
       .delete()
       .then(() => {
+        Alert.alert("Appointment Deleted!");
         navigation.navigate("ViewAppointment");
       })
-      .catch((error) => {
-        alert(error);
-      });
+      .catch((e) => alert(e));
   };
 
   return (

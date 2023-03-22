@@ -24,7 +24,7 @@ const AddAppointment = () => {
     if (!patientPhone.trim()) {
       alert("07xxxxxxxx");
       return;
-    } 
+    }
     if (!patientnic.trim()) {
       alert("NIC number");
       return;
