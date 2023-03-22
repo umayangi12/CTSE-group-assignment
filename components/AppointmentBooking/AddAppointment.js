@@ -1,7 +1,14 @@
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  Alert,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import React, { useState } from "react";
 import { firebase } from "../../config";
-import { Keyboard, StyleSheet } from "react-native";
+import { Keyboard, StyleSheet, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import AppointmentCard from "./AppointmentCard";
 
@@ -58,42 +65,50 @@ const AddAppointment = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <AppointmentCard/>
-      <TextInput
-        placeholder="Title"
-        value={patientTite}
-        onChangeText={(e) => setPatientTite(e)}
-        style={styles.inputTitle}
-      />
-      <TextInput
-        placeholder="Patient Name *"
-        value={patientName}
-        onChangeText={(e) => setPatientName(e)}
-        style={styles.inputTitle}
-      />
-      <TextInput
-        placeholder="Telephone No *"
-        value={patientPhone}
-        onChangeText={(e) => setPatientPhone(e)}
-        style={styles.inputTitle}
-      />
-      <TextInput
-        placeholder="NIC/Passport No *"
-        value={patientnic}
-        onChangeText={(e) => setPatientnic(e)}
-        style={styles.inputTitle}
-      />
-      <TextInput
-        placeholder="Area"
-        value={patientArea}
-        onChangeText={(e) => setPatientArea(e)}
-        style={styles.inputTitle}
-      />
-      <TouchableOpacity style={styles.button} onPress={handleAdd}>
-        <Text style={styles.buttonText}>Add</Text>
+    <ScrollView style={styles.scrollView}>
+      <View style={styles.container}>
+        <AppointmentCard />
+        <TextInput
+          placeholder="Title"
+          value={patientTite}
+          onChangeText={(e) => setPatientTite(e)}
+          style={styles.inputTitle}
+        />
+        <TextInput
+          placeholder="Patient Name *"
+          value={patientName}
+          onChangeText={(e) => setPatientName(e)}
+          style={styles.inputTitle}
+        />
+        <TextInput
+          placeholder="Telephone No *"
+          value={patientPhone}
+          onChangeText={(e) => setPatientPhone(e)}
+          style={styles.inputTitle}
+        />
+        <TextInput
+          placeholder="NIC/Passport No *"
+          value={patientnic}
+          onChangeText={(e) => setPatientnic(e)}
+          style={styles.inputTitle}
+        />
+        <TextInput
+          placeholder="Area"
+          value={patientArea}
+          onChangeText={(e) => setPatientArea(e)}
+          style={styles.inputTitle}
+        />
+        {/* <Button
+          style={styles.buttonText}
+          title="BOOK"
+          color="blue"
+          oonPress={handleAdd}
+        /> */}
+        <TouchableOpacity style={styles.button} onPress={handleAdd}>
+        <Text style={styles.buttonText}>BOOK</Text>
       </TouchableOpacity>
-    </View>
+      </View>
+    </ScrollView>
   );
 };
 
@@ -106,7 +121,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#C9C5FD",
   },
   inputTitle: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "bold",
     marginTop: 10,
     marginBottom: 10,
@@ -123,5 +138,10 @@ const styles = StyleSheet.create({
     color: "black",
     fontSize: 22,
     fontWeight: "bold",
+
+  },
+  scrollView: {
+    backgroundColor: "#C9C5FD",
+    marginHorizontal: -10,
   },
 });
