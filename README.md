@@ -1,1 +1,1 @@
-# STSE-group-assignment
+# CTSE-group-assignment
