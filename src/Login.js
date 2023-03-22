@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={{ fontWeight: "bold", fontSize: 26 }}>Login</Text>
+      <Text style={{ fontWeight: "700", fontSize: 26 }}>Login</Text>
       <View style={{ marginTop: 40 }}>
         <TextInput
           style={styles.textInput}
@@ -56,13 +56,13 @@ const Login = () => {
         onPress={() => loginUser(email, password)}
         style={styles.button}
       >
-        <Text style={{ fontWeight: "bold", fontSize: 22 }}>Login</Text>
+        <Text style={{ fontWeight: "700", fontSize: 22 }}>Login</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => navigation.navigate("Registration")}
         style={{ marginTop: 20 }}
       >
-        <Text style={{ fontWeight: "bold", fontSize: 16 }}>
+        <Text style={{ fontWeight: "700", fontSize: 16 }}>
           Don't have an account? Register now
         </Text>
       </TouchableOpacity>
@@ -70,7 +70,7 @@ const Login = () => {
         onPress={() => {forgetPassword()}}
         style={{ marginTop: 20 }}
       >
-        <Text style={{ fontWeight: "bold", fontSize: 16 }}>
+        <Text style={{ fontWeight: "700", fontSize: 16 }}>
           Forget Passowrd?
         </Text>
       </TouchableOpacity>

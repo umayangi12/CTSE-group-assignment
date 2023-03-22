@@ -41,7 +41,7 @@ const Registration = () => {
 
   return (
     <View style={StyleSheet.container}>
-      <Text style={{ fontWeight: "bold", fontSize: 23, marginTop: 20 }}>
+      <Text style={{ fontWeight: "700", fontSize: 23, marginTop: 20 }}>
         Register Here!
       </Text>
       <View style={{marginTop:40}}>
@@ -78,7 +78,7 @@ const Registration = () => {
       <TouchableOpacity
       onPress={() => registerUser(email, password, firstName, lastName)}
       style={styles.button}>
-        <Text style={{fontWeight:"bold", fontSize: 22}}>Register</Text>
+        <Text style={{fontWeight:"700", fontSize: 22}}>Register</Text>
       </TouchableOpacity>
     </View>
   )
@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 50,
+      marginLeft: 75,
   }
 
 })

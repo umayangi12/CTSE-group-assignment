@@ -94,7 +94,7 @@ const styles=StyleSheet.create({
     },
     inputTitle:{
         fontSize:18,
-        fontWeight:'bold',
+        fontWeight:'800',
         marginTop:20,
         marginBottom:10,
         height:50,

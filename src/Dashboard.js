@@ -23,42 +23,36 @@ const Dashboard = () => {
   }, [])
 
 
-  return(
-    <SafeAreaView
-    style={styles.container}>
-      <Text style={{fontSize: 20, fontWeigh:"bold"}}>
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={{ fontSize: 20, fontWeight: "700" }}>
         Hello, {name.firstName}
       </Text>
-      <Text style={{fontSize: 20, fontWeigh:"bold"}}>
+      <Text style={{ fontSize: 20, fontWeight: "700" }}>
         Wishing you good health!
       </Text>
       <TouchableOpacity
-      onPress={() => {firebase.auth().signOut()}}
-      style={styles.button}>
-        <Text style={{fontSize: 22, fontWeight: "bold"}}>
-          Sign Out
-        </Text>
-        
+        onPress={() => {
+          firebase.auth().signOut();
+        }}
+        style={styles.button}
+      >
+        <Text style={{ fontSize: 22, fontWeight: "700" }}>Sign Out</Text>
       </TouchableOpacity>
       <TouchableOpacity
-      onPress={()=>navigation.navigate('Home')}
-      style={styles.button}>
-        <Text style={{fontSize: 22, fontWeight: "bold"}}>
-          Doctor
-        </Text>
-        
-      </TouchableOpacity>  
-      <TouchableOpacity
-      onPress={()=>navigation.navigate('ViewAppointment')}
-      style={styles.button}>
-        <Text style={{fontSize: 22, fontWeight: "bold"}}>
-          Patient
-        </Text>
-        
+        onPress={() => navigation.navigate("Home")}
+        style={styles.button}
+      >
+        <Text style={{ fontSize: 22, fontWeight: "700" }}>Doctor</Text>
       </TouchableOpacity>
-
+      <TouchableOpacity
+        onPress={() => navigation.navigate("ViewAppointment")}
+        style={styles.button}
+      >
+        <Text style={{ fontSize: 22, fontWeight: "700" }}>Patient</Text>
+      </TouchableOpacity>
     </SafeAreaView>
-  )
+  );
 
 }
 

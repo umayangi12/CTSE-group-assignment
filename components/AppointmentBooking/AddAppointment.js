@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   },
   inputTitle: {
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: "700",
     marginTop: 10,
     marginBottom: 10,
     height: 45,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "black",
     fontSize: 22,
-    fontWeight: "bold",
+    fontWeight: "800",
 
   },
   scrollView: {
