@@ -140,7 +140,7 @@ function App() {
         component={AddAppointment}
         name="AddAppointment"
         options={{
-          headerTitle: () => <Header name="Add Appointment" />,
+          headerTitle: () => <Header name="Place Appointment" />,
           headerStyle: {
             backgroundColor: "#4c00b0",
             height: 150,

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { firebase } from "../../config";
 import { Keyboard, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import AppointmentCard from "./AppointmentCard";
 
 const AddAppointment = () => {
   const navigation = useNavigation();
@@ -58,6 +59,7 @@ const AddAppointment = () => {
 
   return (
     <View style={styles.container}>
+      <AppointmentCard/>
       <TextInput
         placeholder="Title"
         value={patientTite}
@@ -101,18 +103,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "light-blue",
+    backgroundColor: "#C9C5FD",
   },
   inputTitle: {
-    fontSize: 18,
+    fontSize: 12,
     fontWeight: "bold",
-    marginTop: 20,
+    marginTop: 10,
     marginBottom: 10,
-    height: 50,
-    width: "97%",
+    height: 45,
+    width: "90%",
     borderBottomWidth: 1 / 2,
     borderLeftWidth: 1 / 2,
+    borderRightWidth: 1 / 2,
+    borderTopWidth: 1 / 2,
     padding: 10,
+    borderRadius: 7,
   },
   buttonText: {
     color: "black",

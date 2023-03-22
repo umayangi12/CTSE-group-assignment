@@ -29,6 +29,9 @@ const Dashboard = () => {
       <Text style={{fontSize: 20, fontWeigh:"bold"}}>
         Hello, {name.firstName}
       </Text>
+      <Text style={{fontSize: 20, fontWeigh:"bold"}}>
+        Wishing you good health!
+      </Text>
       <TouchableOpacity
       onPress={() => {firebase.auth().signOut()}}
       style={styles.button}>

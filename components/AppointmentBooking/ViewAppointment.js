@@ -51,30 +51,6 @@ const ViewAppointment = () => {
           </View>
         )}
       />
-      {/* <FlashList
-      data={books}
-      numColumns={2}
-      estimatedItemSize={100}
-      renderItem={({item})=>{
-        <View style={styles.noteView}>
-            <Pressable
-            onPress={()=>navigation.navigate('updateBooks',{item})}
-            >
-                <Text style={styles.bookName}>
-                    {item.BookName}
-                </Text>
-                <Text style={styles.bookAuthor}>
-                    {item.Author}
-                </Text>
-                <Text style={styles.bookAuthor}>
-                    {item.Price}
-                </Text>
-            </Pressable>
-
-        </View>
-
-      }}
-      /> */}
       <Button
         title="Add Appointment"
         onPress={() => navigation.navigate("AddAppointment")}
@@ -93,10 +69,10 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     borderRadius: 10,
-    shadowColor: "red",
-    shadowOffset: { width: 10, height: 2 },
+    shadowColor: "blue",
+    shadowOffset: { width: 20, height: 2 },
     shadowOpacity: 0.8,
-    shadowRadius: 2,
+    shadowRadius: 1,
     elevation: 7,
     alignItems: "center",
   },
