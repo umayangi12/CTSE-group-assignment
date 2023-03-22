@@ -1,8 +1,16 @@
-import { View, Text, Button, StyleSheet, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  StyleSheet,
+  Pressable,
+  ImageBackground,
+} from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { firebase } from "../../config";
 import { FlashList } from "@shopify/flash-list";
+import { BackgroundImage } from "react-native-elements/dist/config";
 
 const ViewAppointment = () => {
   const navigation = useNavigation();
@@ -24,7 +32,10 @@ const ViewAppointment = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <BackgroundImage
+      style={styles.container}
+      source={require("../../assets/appointmentBG.jpeg")}
+    >
       <FlashList
         data={appointments}
         numColumns={2}
@@ -55,13 +66,14 @@ const ViewAppointment = () => {
         title="Add Appointment"
         onPress={() => navigation.navigate("AddAppointment")}
       />
-    </View>
+    </BackgroundImage>
   );
 };
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#c9f5d9",
+    opacity: 0.8,
   },
   noteView: {
     flex: 1,
