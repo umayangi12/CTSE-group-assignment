@@ -72,7 +72,7 @@ const ViewAppointment = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#c9f5d9",
+    backgroundColor: "#fff",
     opacity: 0.8,
   },
   noteView: {
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
   },
   patientTite: {
     fontSize: 16,
+    fontWeight: 700,
   },
   patientName: {
     fontSize: 16,
