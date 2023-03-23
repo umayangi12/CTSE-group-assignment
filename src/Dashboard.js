@@ -99,6 +99,14 @@ const Dashboard = () => {
           <Text style={{ fontSize: 22, fontWeight: "700" }}>
             BMI Calculator 
           </Text>
+        </TouchableOpacity>   
+        <TouchableOpacity
+          onPress={() => navigation.navigate("")}
+          style={styles.button}
+        >
+          <Text style={{ fontSize: 22, fontWeight: "700" }}>
+            BMR Calculator 
+          </Text>
         </TouchableOpacity>        
       </SafeAreaView>
     </ScrollView>
