@@ -237,7 +237,7 @@ function App() {
         component={Home}
         name="Home"
         options={{
-          headerTitle: () => <Header name="Appointments" />,
+          headerTitle: () => <Header name="Lab Appointments" />,
           headerStyle: {
             backgroundColor: "#4c00b0",
             height: 150,
@@ -248,7 +248,7 @@ function App() {
         component={NoteAdd}
         name="AddBook"
         options={{
-          headerTitle: () => <Header name="Add Appointment" />,
+          headerTitle: () => <Header name="Add Lab Appointment" />,
           headerStyle: {
             backgroundColor: "#4c00b0",
             height: 150,
@@ -259,7 +259,7 @@ function App() {
         component={Detail}
         name="updateBooks"
         options={{
-          headerTitle: () => <Header name="Edit books" />,
+          headerTitle: () => <Header name="Edit Lab Appointment" />,
           headerStyle: {
             backgroundColor: "#4c00b0",
             height: 150,
