@@ -37,8 +37,8 @@ const Home = () => {
             <Pressable
               onPress={() => navigation.navigate("updateBooks", { item })}
             >
-              <Text style={styles.patientName}>
-                Patient name:{item.PatientName}
+              <Text style={styles.labpatientName}>
+                Patient name:{item.labPatientName}
               </Text>
               <Text style={styles.testName}>Test Name: {item.TestName}</Text>
               <Text style={styles.age}>Age: {item.Age}</Text>
@@ -58,8 +58,8 @@ const Home = () => {
             <Pressable
             onPress={()=>navigation.navigate('updateBooks',{item})}
             >
-                <Text style={styles.patientName}>
-                    {item.PatientName}
+                <Text style={styles.labpatientName}>
+                    {item.labPatientName}
                 </Text>
                 <Text style={styles.testName}>
                     {item.TestName}
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     elevation: 8,
     alignItems: "center",
   },
-  patientName: {
+  labpatientName: {
     fontSize: 16,
     fontWeight: "bold",
     color: "#1e2f97",

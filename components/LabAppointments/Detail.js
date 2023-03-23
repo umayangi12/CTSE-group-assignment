@@ -7,17 +7,17 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 const Detail = ({ route }) => {
   const navigation = useNavigation();
   const [testname, setTestname] = useState(route.params.item.TestName);
-  const [patientName, setPatientName] = useState(route.params.item.PatientName);
+  const [labpatientName, setlabPatientName] = useState(route.params.item.labPatientName);
   const [age, setAge] = useState(route.params.item.Age);
  
 //
   const Appointments = firebase.firestore().collection("Appointments");
 
   const handleUpdate = () => {
-    if (patientName && patientName.length > 0) {
+    if (labpatientName && labpatientName.length > 0) {
       Appointments.doc(route.params.item.key)
         .update({
-          PatientName: patientName,
+          labPatientName: labpatientName,
           TestName: testname,
           Age: age,
         
@@ -53,8 +53,8 @@ const Detail = ({ route }) => {
       {console.log(route.params.item.key)}
       <TextInput
         placeholder="Patient Name"
-        value={patientName}
-        onChangeText={(e) => setPatientName(e)}
+        value={labpatientName}
+        onChangeText={(e) => setlabPatientName(e)}
         style={styles.inputTitle}
       />
       <TextInput

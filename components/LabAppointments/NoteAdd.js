@@ -11,7 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 const NoteAdd = () => {
   const navigation = useNavigation();
   const [testname, setTestname] = useState("");
-  const [patientName, setPatientName] = useState("");
+  const [labpatientName, setlabPatientName] = useState("");
   const [age, setAge] = useState("");
   //date picker
 
@@ -25,11 +25,11 @@ const NoteAdd = () => {
 
   const handleAdd = () => {
     if (!testname.trim()) {
-      alert("Please Enter TestName");
+      alert("Please Enter Test Name");
       return;
     }
-    if (!patientName.trim()) {
-      alert("Please Enter PatientName");
+    if (!labpatientName.trim()) {
+      alert("Please Enter Patient Name");
       return;
     }
     if (!age.trim()) {
@@ -44,11 +44,11 @@ const NoteAdd = () => {
       .collection("Appointments")
       .add({
         TestName: testname,
-        PatientName: patientName,
+        labPatientName: labpatientName,
         Age: age,
       })
       .then(() => {
-        setPatientName("");
+        setlabPatientName("");
         setTestname("");
         setAge("");
         //datepicker start
@@ -65,8 +65,8 @@ const NoteAdd = () => {
     <View style={styles.container}>
       <TextInput
         placeholder="Patient Name"
-        value={patientName}
-        onChangeText={(e) => setPatientName(e)}
+        value={labpatientName}
+        onChangeText={(e) => setlabPatientName(e)}
         style={styles.inputTitle}
       />
       <TextInput
