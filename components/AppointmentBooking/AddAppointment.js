@@ -22,23 +22,23 @@ const AddAppointment = () => {
 
   const handleAdd = () => {
     if (!patientTite.trim()) {
-      alert("Title");
+      alert("Please enter a title");
       return;
     }
     if (!patientName.trim()) {
-      alert("Patient Name");
+      alert("Please enter the patient Name");
       return;
     }
     if (!patientPhone.trim()) {
-      alert("07xxxxxxxx");
+      alert("Please enter the phone number");
       return;
     }
     if (!patientnic.trim()) {
-      alert("NIC number");
+      alert("Please enter the nic/passport");
       return;
     }
     if (!patientArea.trim()) {
-      alert("Enter your closest city");
+      alert("Please enter the city");
       return;
     }
     firebase
