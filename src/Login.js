@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     marginTop: -40,
-    backgroundColor: "#C0E8DA",
+    backgroundColor: "#fff",
   },
 
   textInput: {
@@ -127,13 +127,13 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    marginTop: 50,
-    height: 70,
-    width: 250,
+    marginTop: 60,
+    height: 50,
+    width: 320,
     backgroundColor: "#026efd",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 50,
+    borderRadius: 15,
   },
   error: {
     color: 'red'

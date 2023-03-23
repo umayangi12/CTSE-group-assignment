@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { firebase } from "../../config";
 import { FlashList } from "@shopify/flash-list";
+import { BackgroundImage } from "react-native-elements/dist/config";
 
 const DoctorDetails = () => {
   const navigation = useNavigation();
@@ -38,22 +39,25 @@ const DoctorDetails = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <BackgroundImage
+      style={styles.container}
+      source={require("../../assets/DoctorView.jpg")}
+    >
       <FlashList
         data={doctor}
-        numColumns={2}
+        numColumns={1}
         estimatedItemSize={100}
         renderItem={({ item }) => (
           <View style={styles.noteView}>
             <Pressable
               onPress={() => navigation.navigate("DoctorUD", { item })}
             >
-              <Text style={styles.paname}>Book name:{item.Paname}</Text>
-              <Text style={styles.diagnose}>Auther:{item.Diagnose}</Text>
-              <Text style={styles.ddate}>Price:{item.Ddate}</Text>
-              <Text style={styles.phone}>Auther:{item.Phone}</Text>
-              <Text style={styles.dname}>Price:{item.Dname}</Text>
-              <Text style={styles.med1}>Price:{item.Med1}</Text>
+              <Text style={styles.paname}>Patient Name: {item.Paname}</Text>
+              <Text style={styles.diagnose}>Diagnosis: {item.Diagnose}</Text>
+              <Text style={styles.ddate}>Date: {item.Ddate}</Text>
+              <Text style={styles.phone}>Phone number: {item.Phone}</Text>
+              <Text style={styles.dname}>Doctor Name: {item.Dname}</Text>
+              <Text style={styles.med1}>Prescription: {item.Med1}</Text>
             </Pressable>
           </View>
         )}
@@ -86,17 +90,19 @@ const DoctorDetails = () => {
         title="Patient Checking"
         onPress={() => navigation.navigate("DoctorAdd")}
       />
-    </View>
+    </BackgroundImage>
   );
 };
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#c9f5d9",
+    backgroundColor: "#fff",
+    opacity: 0.8,
+    resizeMode: "cover",
   },
   noteView: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#7D8CF1",
     margin: 10,
     padding: 10,
     borderRadius: 10,
@@ -104,16 +110,25 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 10, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 2,
-    elevation: 7,
+    elevation: 8,
     alignItems: "center",
   },
-  bookName: {
+  paname: {
     fontSize: 16,
   },
-  bookAuthor: {
+  diagnose: {
     fontSize: 16,
   },
-  bookPrice: {
+  ddate: {
+    fontSize: 16,
+  },
+  phone: {
+    fontSize: 16,
+  },
+  dname: {
+    fontSize: 16,
+  },
+  med1: {
     fontSize: 16,
   },
 });
