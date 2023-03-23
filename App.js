@@ -6,10 +6,6 @@ import { firebase } from "./config";
 import Login from "./src/Login";
 import Registration from "./src/Registration";
 import Dashboard from "./src/Dashboard";
-import Header from "./components/Header";
-import Home from './components/Home';
-import NoteAdd from './components/NoteAdd';
-import Detail from './components/Detail';
 import AddAppointment from "./components/AppointmentBooking/AddAppointment";
 import ViewAppointment from "./components/AppointmentBooking/ViewAppointment";
 import UpdateAppointment from "./components/AppointmentBooking/UpdateAppointment";
@@ -19,6 +15,12 @@ import DoctorDash from "./components/Doctor/DoctorDash";
 import DoctorAdd from "./components/Doctor/DoctorAdd";
 import DoctorDetails from "./components/Doctor/Doctordetails";
 import DoctorUD from "./components/Doctor/DoctorUD";
+import ContactUs from "./components/LabAppointments/ContactUs"
+import Header from "./components/LabAppointments/Header";
+import Home from "./components/LabAppointments/Home";
+import NoteAdd from "./components/LabAppointments/NoteAdd";
+import Detail from "./components//LabAppointments/Detail";
+
 
 const stack = createStackNavigator();
 
@@ -96,7 +98,7 @@ function App() {
           },
         }}
       />
-      <stack.Screen
+      {/* <stack.Screen
         component={Home}
         name="Home"
         options={{
@@ -106,8 +108,8 @@ function App() {
             height: 150,
           },
         }}
-      />
-      <stack.Screen
+      /> */}
+      {/* <stack.Screen
         component={NoteAdd}
         name="AddBook"
         options={{
@@ -117,8 +119,8 @@ function App() {
             height: 150,
           },
         }}
-      />
-      <stack.Screen
+      /> */}
+      {/* <stack.Screen
         component={Detail}
         name="updateBooks"
         options={{
@@ -128,7 +130,7 @@ function App() {
             height: 150,
           },
         }}
-      />
+      /> */}
 
       <stack.Screen
         component={ViewAppointment}
@@ -225,6 +227,50 @@ function App() {
         name="DoctorUD"
         options={{
           headerTitle: () => <Header name="Update Details" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={Home}
+        name="Home"
+        options={{
+          headerTitle: () => <Header name="Appointments" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={NoteAdd}
+        name="AddBook"
+        options={{
+          headerTitle: () => <Header name="Add Appointment" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      /> 
+      <stack.Screen
+        component={Detail}
+        name="updateBooks"
+        options={{
+          headerTitle: () => <Header name="Edit books" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={ContactUs}
+        name="ContactUs"
+        options={{
+          headerTitle: () => <Header name="Contact Us" />,
           headerStyle: {
             backgroundColor: "#4c00b0",
             height: 150,

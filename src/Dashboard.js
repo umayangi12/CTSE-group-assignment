@@ -96,7 +96,7 @@ const Dashboard = () => {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate("")}
+          onPress={() => navigation.navigate("Home")}
           style={styles.buttonLab}
         >
           <Text style={{ fontSize: 14, fontWeight: "700", color: "#fff" }}>
@@ -126,6 +126,12 @@ const Dashboard = () => {
           <Text style={{ fontSize: 14, fontWeight: "700" }}>
             BMR Calculator
           </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ContactUs")}
+          style={styles.button}
+        >
+          <Text style={{ fontSize: 22, fontWeight: "bold" }}>Contacts</Text>
         </TouchableOpacity>
       </SafeAreaView>
     </ScrollView>

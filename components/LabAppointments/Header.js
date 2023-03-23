@@ -4,7 +4,7 @@ import React from 'react'
 const Header = (props) => {
   return (
     <View style={{margineLeft:15}}>
-      <Text style={{fontWeight:'800', fontSize:28}}>
+      <Text style={{fontWeight:'bold',fontSize:28}}>
         {props.name}
       </Text>
     </View>
