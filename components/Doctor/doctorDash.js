@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 //import { firebase } from '../config'
 
 
-const doctorDash = () => {
+const DoctorDash = () => {
     const navigation = useNavigation();
 
     return (
@@ -42,7 +42,7 @@ const doctorDash = () => {
     );
 }
 
-export default doctorDash
+export default DoctorDash
 
 const styles = StyleSheet.create({
     container: {

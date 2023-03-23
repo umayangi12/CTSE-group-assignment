@@ -1,8 +1,9 @@
-import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, Alert, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { firebase } from '../../config'
 import { Keyboard, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import DoctorCard from './DoctorCard';
 // import DatePicker from 'react-native-datepicker';
 
 const DoctorAdd = () => {
@@ -68,51 +69,53 @@ const DoctorAdd = () => {
                 // setMed4('')
                 Keyboard.dismiss();
                 Alert.alert('Details Added Successfully')
-                navigation.navigate('doctorDash')
+                navigation.navigate('DoctorDash')
 
             }).catch((e) => alert(e))
     }
 
     return (
+      <ScrollView style={styles.scrollView}>
         <View style={styles.container}>
-            <TextInput
-                placeholder='Patient Name'
-                value={paname}
-                onChangeText={(e) => setPaname(e)}
-                style={styles.inputTitle}
-            />
-            <TextInput
-                placeholder='Diagnose'
-                value={diagnose}
-                onChangeText={(e) => setDiagnose(e)}
-                style={styles.inputTitle}
-            />
-            <TextInput
-                placeholder='Date'
-                value={ddate}
-                onChangeText={(e) => setDdate(e)}
-                style={styles.inputTitle}
-            />
-    
-            <TextInput
-                placeholder='Phone'
-                value={phone}
-                onChangeText={(e) => setPhone(e)}
-                style={styles.inputTitle}
-            />
-            <TextInput
-                placeholder='Doctor Name'
-                value={dname}
-                onChangeText={(e) => setDname(e)}
-                style={styles.inputTitle}
-            />
-            <TextInput
-                placeholder='Prescriptions'
-                value={med1}
-                onChangeText={(e) => setMed1(e)}
-                style={styles.inputTitle}
-            />
-            {/* <TextInput
+            <DoctorCard />
+          <TextInput
+            placeholder="Patient Name"
+            value={paname}
+            onChangeText={(e) => setPaname(e)}
+            style={styles.inputTitle}
+          />
+          <TextInput
+            placeholder="Diagnose"
+            value={diagnose}
+            onChangeText={(e) => setDiagnose(e)}
+            style={styles.inputTitle}
+          />
+          <TextInput
+            placeholder="Date"
+            value={ddate}
+            onChangeText={(e) => setDdate(e)}
+            style={styles.inputTitle}
+          />
+
+          <TextInput
+            placeholder="Phone"
+            value={phone}
+            onChangeText={(e) => setPhone(e)}
+            style={styles.inputTitle}
+          />
+          <TextInput
+            placeholder="Doctor Name"
+            value={dname}
+            onChangeText={(e) => setDname(e)}
+            style={styles.inputTitle}
+          />
+          <TextInput
+            placeholder="Prescriptions"
+            value={med1}
+            onChangeText={(e) => setMed1(e)}
+            style={styles.inputTitle}
+          />
+          {/* <TextInput
         placeholder='Asprin'
         value={price}
         onChangeText={(e)=>setMed2(e)}
@@ -130,54 +133,58 @@ const DoctorAdd = () => {
         onChangeText={(e)=>setMed4(e)}
         style={styles.inputTitle}
       /> */}
-            <TouchableOpacity
-                style={styles.button}
-                onPress={handleAdd}
-            >
-                <Text style={{ fontSize: 22, fontWeight: "bold" }}>
-                    Add
-                </Text>
-
-            </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={handleAdd}>
+            <Text style={{ fontSize: 22, fontWeight: "bold" }}>Add</Text>
+          </TouchableOpacity>
         </View>
-    )
+      </ScrollView>
+    );
 }
 
 export default DoctorAdd
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        backgroundColor: 'light-blue'
-    },
-    inputTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        marginTop: 20,
-        marginBottom: 10,
-        height: 50,
-        width: '90%',
-        borderWidth: 1,
-        borderRadius: 15,
-        padding: 10
-    },
-    buttonText: {
-        color: 'black',
-        fontSize: 22,
-        fontWeight: 'bold'
-    },
-    button: {
-        marginTop: 30,
-        height: 70,
-        width: 250,
-        backgroundColor: '#026efd',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 50,
-    },
-    // datePickerStyle: {
-    //     width: 230,
-    //   },
-
-})
+  container: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#A9B0E0",
+  },
+  inputTitle: {
+    fontSize: 14,
+    fontWeight: "700",
+    marginTop: 20,
+    marginBottom: 10,
+    height: 45,
+    width: "90%",
+    borderBottomWidth: 1 / 2,
+    borderLeftWidth: 1 / 2,
+    borderRightWidth: 1 / 2,
+    borderTopWidth: 1 / 2,
+    padding: 10,
+    borderRadius: 7,
+    borderColor: "black",
+    backgroundColor: "#fff",
+    opacity: 0.7,
+  },
+  buttonText: {
+    color: "black",
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+  button: {
+    marginTop: 20,
+    height: 50,
+    width: 230,
+    backgroundColor: "#026efd",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+  },
+  // datePickerStyle: {
+  //     width: 230,
+  //   },
+  scrollView: {
+    backgroundColor: "#A9B0E0",
+    marginHorizontal: -10,
+  },
+});

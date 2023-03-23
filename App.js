@@ -15,7 +15,7 @@ import ViewAppointment from "./components/AppointmentBooking/ViewAppointment";
 import UpdateAppointment from "./components/AppointmentBooking/UpdateAppointment";
 import BmiCalculator from "./components/BmiCalculator";
 import BmrCalculator from "./components/BmrCalculator";
-import doctorDash from "./components/Doctor/doctorDash";
+import DoctorDash from "./components/Doctor/DoctorDash";
 import DoctorAdd from "./components/Doctor/DoctorAdd";
 import DoctorDetails from "./components/Doctor/Doctordetails";
 import DoctorUD from "./components/Doctor/DoctorUD";
@@ -188,8 +188,8 @@ function App() {
         }}
       />
       <stack.Screen
-        component={doctorDash}
-        name="doctorDash"
+        component={DoctorDash}
+        name="DoctorDash"
         options={{
           headerTitle: () => <Header name="Doctor Dashboard" />,
           headerStyle: {
@@ -204,7 +204,7 @@ function App() {
         options={{
           headerTitle: () => <Header name="Patient Checking" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}

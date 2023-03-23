@@ -72,7 +72,7 @@ const Dashboard = () => {
         </Text>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate("doctorDash")}
+          onPress={() => navigation.navigate("DoctorDash")}
           style={styles.buttonDoctor}
         >
           <Text style={{ fontSize: 14, fontWeight: "700", color: "#fff" }}>

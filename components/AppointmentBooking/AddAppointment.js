@@ -133,7 +133,9 @@ const styles = StyleSheet.create({
     borderTopWidth: 1 / 2,
     padding: 10,
     borderRadius: 7,
-    borderColor: 'black'
+    borderColor: 'black',
+    backgroundColor: "#fff",
+    opacity: 0.7,
   },
   buttonText: {
     color: "black",
