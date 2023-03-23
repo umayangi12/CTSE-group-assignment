@@ -66,6 +66,7 @@ const Dashboard = () => {
             marginLeft: -270,
             marginTop: 20,
             marginBottom: -25,
+            color: "#687BF3",
           }}
         >
           Quick Access
@@ -80,7 +81,7 @@ const Dashboard = () => {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate("ViewAppointment")}
+          onPress={() => navigation.navigate("AppointmentDash")}
           style={styles.buttonPatient}
         >
           <Text style={{ fontSize: 14, fontWeight: "700", color: "#fff" }}>
@@ -103,6 +104,18 @@ const Dashboard = () => {
             Laboratory
           </Text>
         </TouchableOpacity>
+        <Text
+          style={{
+            fontSize: 13,
+            fontWeight: "700",
+            marginLeft: -270,
+            marginTop: 20,
+            marginBottom: -25,
+            color: "#687BF3",
+          }}
+        >
+          Calculators
+        </Text>
         <View>
           <BmiCard />
         </View>

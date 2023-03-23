@@ -38,7 +38,7 @@ const ViewAppointment = () => {
     >
       <FlashList
         data={appointments}
-        numColumns={2}
+        numColumns={1}
         estimatedItemSize={100}
         renderItem={({ item }) => (
           <View style={styles.noteView}>
@@ -47,15 +47,15 @@ const ViewAppointment = () => {
                 navigation.navigate("updateAppointments", { item })
               }
             >
-              <Text style={styles.patientTite}>Title:{item.PatientTitle}</Text>
+              <Text style={styles.patientTite}>Title: {item.PatientTitle}</Text>
               <Text style={styles.patientName}>
-                Patient Name:{item.PatientName}
+                Patient Name: {item.PatientName}
               </Text>
               <Text style={styles.patientPhone}>
-                Mobile:{item.PatientPhone}
+                Mobile: {item.PatientPhone}
               </Text>
               <Text style={styles.patientnic}>
-                NIC/Passort:{item.Patientnic}
+                NIC/Passort: {item.Patientnic}
               </Text>
               <Text style={styles.patientArea}>Area:{item.PatientArea}</Text>
             </Pressable>

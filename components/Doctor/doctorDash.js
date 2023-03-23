@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
-    marginRight: -10,
+    marginRight: -0,
   },
   image: {
     resizeMode: "cover",

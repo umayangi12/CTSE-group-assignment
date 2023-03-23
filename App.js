@@ -20,6 +20,7 @@ import Header from "./components/LabAppointments/Header";
 import Home from "./components/LabAppointments/Home";
 import NoteAdd from "./components/LabAppointments/NoteAdd";
 import Detail from "./components//LabAppointments/Detail";
+import AppointmentDash from "./components/AppointmentBooking/AppointmentDash";
 
 
 const stack = createStackNavigator();
@@ -197,6 +198,18 @@ function App() {
           headerStyle: {
             backgroundColor: "#2A3A7D",
             height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={AppointmentDash}
+        name="AppointmentDash"
+        options={{
+          headerTitle: () => <Header name="Appointment Dashboard" />,
+          headerStyle: {
+            backgroundColor: "#2A3A7D",
+            height: 150,
+      
           },
         }}
       />
