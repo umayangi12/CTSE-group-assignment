@@ -195,7 +195,7 @@ function App() {
         options={{
           headerTitle: () => <Header name="Doctor Dashboard" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}
