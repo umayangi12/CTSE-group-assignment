@@ -15,6 +15,10 @@ import ViewAppointment from "./components/AppointmentBooking/ViewAppointment";
 import UpdateAppointment from "./components/AppointmentBooking/UpdateAppointment";
 import BmiCalculator from "./components/BmiCalculator";
 import BmrCalculator from "./components/BmrCalculator";
+import doctorDash from "./components/Doctor/doctorDash";
+import DoctorAdd from "./components/Doctor/DoctorAdd";
+import DoctorDetails from "./components/Doctor/Doctordetails";
+import DoctorUD from "./components/Doctor/DoctorUD";
 
 const stack = createStackNavigator();
 
@@ -179,6 +183,50 @@ function App() {
           headerTitle: () => <Header name="BMR Calculator" />,
           headerStyle: {
             backgroundColor: "#227131",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={doctorDash}
+        name="doctorDash"
+        options={{
+          headerTitle: () => <Header name="Doctor Dashboard" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={DoctorAdd}
+        name="DoctorAdd"
+        options={{
+          headerTitle: () => <Header name="Patient Checking" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={DoctorDetails}
+        name="DoctorDetails"
+        options={{
+          headerTitle: () => <Header name="All Details" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={DoctorUD}
+        name="DoctorUD"
+        options={{
+          headerTitle: () => <Header name="Update Details" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
             height: 150,
           },
         }}
