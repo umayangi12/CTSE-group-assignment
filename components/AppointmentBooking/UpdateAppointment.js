@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, Text, StyleSheet, TextInput, ScrollView } from "react-native";
 import React, { useState } from "react";
 import { firebase } from "../../config";
 import { useNavigation } from "@react-navigation/native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Alert } from "react-native";
+import AppointmentCard from "./AppointmentCard";
 
 const UpdateAppointment = ({ route }) => {
   const navigation = useNavigation();
@@ -48,47 +49,50 @@ const UpdateAppointment = ({ route }) => {
   };
 
   return (
-    <View style={styles.container}>
-      {console.log(route.params.item.key)}
-      <TextInput
-        placeholder="Title"
-        value={patientTite}
-        onChangeText={(e) => setPatientTite(e)}
-        style={styles.inputTitle}
-      />
-      <TextInput
-        placeholder="Patient Name *"
-        value={patientName}
-        onChangeText={(e) => setPatientName(e)}
-        style={styles.inputTitle}
-      />
-      <TextInput
-        placeholder="Telephone No *"
-        value={patientPhone}
-        onChangeText={(e) => setPatientPhone(e)}
-        style={styles.inputTitle}
-      />
-      <TextInput
-        placeholder="NIC/Passport No *"
-        value={patientnic}
-        onChangeText={(e) => setPatientnic(e)}
-        style={styles.inputTitle}
-      />
-      <TextInput
-        placeholder="Area"
-        value={patientArea}
-        onChangeText={(e) => setPatientArea(e)}
-        style={styles.inputTitle}
-      />
-      <View style={styles.buttonView}>
-        <TouchableOpacity style={styles.button} onPress={handleUpdate}>
-          <Text style={styles.buttonText}>UPDATE</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={handleDelete}>
-          <Text style={styles.buttonText}>DELETE</Text>
-        </TouchableOpacity>
+    <ScrollView style={styles.scrollView}>
+      <View style={styles.container}>
+        <AppointmentCard/>
+        {/* {console.log(route.params.item.key)} */}
+        <TextInput
+          placeholder="Title"
+          value={patientTite}
+          onChangeText={(e) => setPatientTite(e)}
+          style={styles.inputTitle}
+        />
+        <TextInput
+          placeholder="Patient Name *"
+          value={patientName}
+          onChangeText={(e) => setPatientName(e)}
+          style={styles.inputTitle}
+        />
+        <TextInput
+          placeholder="Telephone No *"
+          value={patientPhone}
+          onChangeText={(e) => setPatientPhone(e)}
+          style={styles.inputTitle}
+        />
+        <TextInput
+          placeholder="NIC/Passport No *"
+          value={patientnic}
+          onChangeText={(e) => setPatientnic(e)}
+          style={styles.inputTitle}
+        />
+        <TextInput
+          placeholder="Area"
+          value={patientArea}
+          onChangeText={(e) => setPatientArea(e)}
+          style={styles.inputTitle}
+        />
+        <View style={styles.buttonView}>
+          <TouchableOpacity style={styles.button} onPress={handleUpdate}>
+            <Text style={styles.buttonText}>UPDATE</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={handleDelete}>
+            <Text style={styles.buttonText}>DELETE</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -98,18 +102,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "#A9B0E0",
   },
   inputTitle: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: "700",
-    marginTop: 20,
+    marginTop: 10,
     marginBottom: 10,
-    height: 50,
-    width: "97%",
-    borderWidth: 1,
-    borderRadius: 5,
+    height: 45,
+    width: "90%",
+    borderBottomWidth: 1 / 2,
+    borderLeftWidth: 1 / 2,
+    borderRightWidth: 1 / 2,
+    borderTopWidth: 1 / 2,
     padding: 10,
+    borderRadius: 7,
   },
   buttonView: {
     flexDirection: "row",
@@ -125,5 +132,9 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "#fff",
     fontSize: 18,
+  },
+  scrollView: {
+    backgroundColor: "#A9B0E0",
+    marginHorizontal: -10,
   },
 });

@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#C9C5FD",
+    backgroundColor: "#A9B0E0",
   },
   inputTitle: {
     fontSize: 14,
@@ -133,15 +133,15 @@ const styles = StyleSheet.create({
     borderTopWidth: 1 / 2,
     padding: 10,
     borderRadius: 7,
+    borderColor: 'black'
   },
   buttonText: {
     color: "black",
     fontSize: 22,
     fontWeight: "800",
-
   },
   scrollView: {
-    backgroundColor: "#C9C5FD",
+    backgroundColor: "#A9B0E0",
     marginHorizontal: -10,
   },
 });

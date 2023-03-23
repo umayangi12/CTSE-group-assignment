@@ -25,7 +25,7 @@ const radius = 20;
 const styles = StyleSheet.create({
   cardContainer: {
     width: deviceWidth - 50,
-    backgroundColor: "#796FFD",
+    backgroundColor: "#394FD8",
     height: 230,
     marginTop: 10,
     marginBottom: 10,
@@ -61,8 +61,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginHorizontal: 10,
     marginVertical: 5,
-
-
   },
 });
 

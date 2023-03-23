@@ -132,7 +132,7 @@ function App() {
         options={{
           headerTitle: () => <Header name="Appointments" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}
@@ -144,7 +144,7 @@ function App() {
         options={{
           headerTitle: () => <Header name="Place Appointment" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}
@@ -156,7 +156,7 @@ function App() {
         options={{
           headerTitle: () => <Header name="Edit Appointment" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}
@@ -167,7 +167,7 @@ function App() {
         options={{
           headerTitle: () => <Header name="BMI Calculator" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}
@@ -178,7 +178,7 @@ function App() {
         options={{
           headerTitle: () => <Header name="BMR Calculator" />,
           headerStyle: {
-            backgroundColor: "#01579B",
+            backgroundColor: "#227131",
             height: 150,
           },
         }}
