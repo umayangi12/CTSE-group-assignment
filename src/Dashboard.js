@@ -57,7 +57,17 @@ const Dashboard = () => {
           <Text style={{ fontSize: 12, fontWeight: "700" }}>Sign Out</Text>
         </TouchableOpacity>
 
-        <Text style={{fontSize: 13, fontWeight: "700", marginLeft: -270, marginTop: 20, marginBottom: -25}}>Quick Access</Text>
+        <Text
+          style={{
+            fontSize: 13,
+            fontWeight: "700",
+            marginLeft: -270,
+            marginTop: 20,
+            marginBottom: -25,
+          }}
+        >
+          Quick Access
+        </Text>
 
         <TouchableOpacity
           onPress={() => navigation.navigate("Home")}
@@ -74,7 +84,7 @@ const Dashboard = () => {
           <Text style={{ fontSize: 14, fontWeight: "700", color: "#fff" }}>
             Doctor Channeling
           </Text>
-        </TouchableOpacity>   
+        </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate("")}
           style={styles.buttonPharmacy}
@@ -82,7 +92,7 @@ const Dashboard = () => {
           <Text style={{ fontSize: 14, fontWeight: "700", color: "#fff" }}>
             Pharmacy
           </Text>
-        </TouchableOpacity>        
+        </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate("")}
           style={styles.buttonLab}
@@ -97,17 +107,17 @@ const Dashboard = () => {
           style={styles.button}
         >
           <Text style={{ fontSize: 22, fontWeight: "700" }}>
-            BMI Calculator 
+            BMI Calculator
           </Text>
-        </TouchableOpacity>   
+        </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate("")}
+          onPress={() => navigation.navigate("BmrCalculator")}
           style={styles.button}
         >
           <Text style={{ fontSize: 22, fontWeight: "700" }}>
-            BMR Calculator 
+            BMR Calculator
           </Text>
-        </TouchableOpacity>        
+        </TouchableOpacity>
       </SafeAreaView>
     </ScrollView>
   );

@@ -14,6 +14,7 @@ import AddAppointment from "./components/AppointmentBooking/AddAppointment";
 import ViewAppointment from "./components/AppointmentBooking/ViewAppointment";
 import UpdateAppointment from "./components/AppointmentBooking/UpdateAppointment";
 import BmiCalculator from "./components/BmiCalculator";
+import BmrCalculator from "./components/BmrCalculator";
 
 const stack = createStackNavigator();
 
@@ -83,8 +84,8 @@ function App() {
           headerTitle: () => <Header name="Dashboard" />,
           headerStyle: {
             height: 150,
-            borderBottomLeftRadius: 50,
-            borderBottomRightRadius: 50,
+            borderBottomLeftRadius: 20,
+            borderBottomRightRadius: 20,
             backgroundColor: "#00e4d0",
             shadowColor: "#000",
             elevation: 25,
@@ -167,6 +168,17 @@ function App() {
           headerTitle: () => <Header name="BMI Calculator" />,
           headerStyle: {
             backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={BmrCalculator}
+        name="BmrCalculator"
+        options={{
+          headerTitle: () => <Header name="BMR Calculator" />,
+          headerStyle: {
+            backgroundColor: "#01579B",
             height: 150,
           },
         }}
