@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#c9f5d9",
+    backgroundColor: "#A9B0E0",
   },
   inputTitle: {
     fontSize: 18,
@@ -118,5 +118,4 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
   },
-
 });

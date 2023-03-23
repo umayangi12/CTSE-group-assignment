@@ -239,7 +239,7 @@ function App() {
         options={{
           headerTitle: () => <Header name="Lab Appointments" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}
@@ -250,18 +250,18 @@ function App() {
         options={{
           headerTitle: () => <Header name="Add Lab Appointment" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}
-      /> 
+      />
       <stack.Screen
         component={Detail}
         name="updateBooks"
         options={{
           headerTitle: () => <Header name="Edit Lab Appointment" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}
@@ -272,7 +272,7 @@ function App() {
         options={{
           headerTitle: () => <Header name="Contact Us" />,
           headerStyle: {
-            backgroundColor: "#4c00b0",
+            backgroundColor: "#2A3A7D",
             height: 150,
           },
         }}
