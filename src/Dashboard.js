@@ -1,4 +1,4 @@
-import { Text, SafeAreaView, TouchableOpacity, StyleSheet, ScrollView } from 'react-native'
+import { Text, SafeAreaView, TouchableOpacity, StyleSheet, ScrollView, Image, Dimensions, ImageBackground, View } from 'react-native'
 import React, { useEffect, useState} from 'react'
 import {firebase}  from '../config'
 import {useNavigation} from '@react-navigation/native'
@@ -26,10 +26,26 @@ const Dashboard = () => {
   return (
     <ScrollView style={styles.scrollView}>
       <SafeAreaView style={styles.container}>
-        <Text style={{ fontSize: 20, fontWeight: "700" }}>
+        <ImageBackground
+          style={styles.ImageStyle}
+          source={require("../assets/dashboardbg.jpg")}
+        />
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "700",
+            justifyContent: "center",
+          }}
+        >
           Hello, {name.firstName}
         </Text>
-        <Text style={{ fontSize: 20, fontWeight: "700" }}>
+        <Text
+          style={{
+            fontSize: 18,
+            fontWeight: "700",
+            justifyContent: "center",
+          }}
+        >
           Wishing you good health!
         </Text>
         <TouchableOpacity
@@ -73,7 +89,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    marginTop: 100,
+    marginTop: 50,
     backgroundColor: "#fff",
   },
   button: {
@@ -88,5 +104,16 @@ const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: "#fff",
     marginHorizontal: -20,
+  },
+  ImageStyle: {
+    height: 200,
+    opacity: 0.7,
+    marginLeft: 10,
+    marginTop: -45,
+    borderRadius: 10,
+    width: 400,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+    position: 'absolute',
   },
 });
