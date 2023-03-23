@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
-    marginRight: 170,
+    marginRight: 180,
   },
   buttonDetails: {
     marginTop: -40,

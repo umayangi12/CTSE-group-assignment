@@ -141,6 +141,7 @@ const styles = StyleSheet.create({
     color: "black",
     fontSize: 22,
     fontWeight: "800",
+   
   },
   scrollView: {
     backgroundColor: "#A9B0E0",

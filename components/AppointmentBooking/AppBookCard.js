@@ -6,7 +6,7 @@ const AppBookCard = () => {
     <View style={styles.cardContainer}>
       <Image
         style={styles.ImageStyle}
-        source={require("../../assets/image3.jpg")}
+        source={require("../../assets/appBookCard.jpg")}
       />
     </View>
   );

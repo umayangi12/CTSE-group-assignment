@@ -6,7 +6,7 @@ const AppAllDetailCard = () => {
     <View style={styles.cardContainer}>
       <Image
         style={styles.ImageStyle}
-        source={require("../../assets/image4.jpg")}
+        source={require("../../assets/alldetailsCard.jpg")}
       />
     </View>
   );
