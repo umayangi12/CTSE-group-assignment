@@ -13,6 +13,7 @@ import Detail from './components/Detail';
 import AddAppointment from "./components/AppointmentBooking/AddAppointment";
 import ViewAppointment from "./components/AppointmentBooking/ViewAppointment";
 import UpdateAppointment from "./components/AppointmentBooking/UpdateAppointment";
+import BmiCalculator from "./components/BmiCalculator";
 
 const stack = createStackNavigator();
 
@@ -153,6 +154,17 @@ function App() {
         name="updateAppointments"
         options={{
           headerTitle: () => <Header name="Edit Appointment" />,
+          headerStyle: {
+            backgroundColor: "#4c00b0",
+            height: 150,
+          },
+        }}
+      />
+      <stack.Screen
+        component={BmiCalculator}
+        name="BmiCalculator"
+        options={{
+          headerTitle: () => <Header name="BMI Calculator" />,
           headerStyle: {
             backgroundColor: "#4c00b0",
             height: 150,

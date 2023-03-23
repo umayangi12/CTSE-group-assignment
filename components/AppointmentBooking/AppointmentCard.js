@@ -2,10 +2,6 @@ import React from "react";
 import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
 import IconLabel from "./IconLabel";
 
-// console.log(date)
-// console.log(month);
-// console.log(year);
-
 const AppointmentCard = () => {
     return (
       <View style={styles.cardContainer}>
