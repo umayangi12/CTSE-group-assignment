@@ -11,7 +11,7 @@ const Detail = ({ route }) => {
   const [age, setAge] = useState(route.params.item.Age);
  
 //
-  const Appointments = firebase.firestore().collection("Appointments");
+  const Appointments = firebase.firestore().collection("labAppointments");
 
   const handleUpdate = () => {
     if (labpatientName && labpatientName.length > 0) {

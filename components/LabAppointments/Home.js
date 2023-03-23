@@ -10,7 +10,7 @@ import { FlashList } from "@shopify/flash-list";
 const Home = () => {
   const navigation = useNavigation();
   const [appointments, setAppointments] = useState([]);
-  const Appointments = firebase.firestore().collection("Appointments");
+  const Appointments = firebase.firestore().collection("labAppointments");
  
   useEffect(() => {
     const appointmentSubsc = Appointments.onSnapshot((querysnapshot) => {

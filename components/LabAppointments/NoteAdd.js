@@ -41,7 +41,7 @@ const NoteAdd = () => {
     // date picker end
     firebase
       .firestore()
-      .collection("Appointments")
+      .collection("labAppointments")
       .add({
         TestName: testname,
         labPatientName: labpatientName,
