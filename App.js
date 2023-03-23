@@ -44,7 +44,7 @@ function App() {
           options={{
             headerTitle: () => <Header name="User Login" />,
             headerStyle: {
-              height: 150,
+              height: 170,
               borderBottomLeftRadius: 50,
               borderBottomRightRadius: 50,
               backgroundColor: "#00e4d0",
@@ -58,9 +58,9 @@ function App() {
           name="Registration"
           component={Registration}
           options={{
-            headerTitle: () => <Header name="User Login" />,
+            headerTitle: () => <Header name="User Register" />,
             headerStyle: {
-              height: 150,
+              height: 170,
               borderBottomLeftRadius: 50,
               borderBottomRightRadius: 50,
               backgroundColor: "#00e4d0",
