@@ -51,7 +51,7 @@ const UpdateAppointment = ({ route }) => {
   return (
     <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
-        <AppointmentCard/>
+        <AppointmentCard />
         {/* {console.log(route.params.item.key)} */}
         <TextInput
           placeholder="Title"
@@ -117,6 +117,8 @@ const styles = StyleSheet.create({
     borderTopWidth: 1 / 2,
     padding: 10,
     borderRadius: 7,
+    backgroundColor: "#fff",
+    opacity: 0.7,
   },
   buttonView: {
     flexDirection: "row",
