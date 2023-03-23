@@ -2,6 +2,8 @@ import { Text, SafeAreaView, TouchableOpacity, StyleSheet, ScrollView, Image, Di
 import React, { useEffect, useState} from 'react'
 import {firebase}  from '../config'
 import {useNavigation} from '@react-navigation/native'
+import BmiCard from '../components/BmiCard'
+import BmrCard from '../components/BmrCard'
 
 
 const Dashboard = () => {
@@ -101,20 +103,27 @@ const Dashboard = () => {
             Laboratory
           </Text>
         </TouchableOpacity>
+        <View>
+          <BmiCard />
+        </View>
+        <View>
+          <BmrCard />
+        </View>
 
         <TouchableOpacity
           onPress={() => navigation.navigate("BmiCalculator")}
-          style={styles.button}
+          style={styles.buttonBmi}
         >
-          <Text style={{ fontSize: 22, fontWeight: "700" }}>
+          <Text style={{ fontSize: 14, fontWeight: "700" }}>
             BMI Calculator
           </Text>
         </TouchableOpacity>
+
         <TouchableOpacity
           onPress={() => navigation.navigate("BmrCalculator")}
-          style={styles.button}
+          style={styles.buttonBmr}
         >
-          <Text style={{ fontSize: 22, fontWeight: "700" }}>
+          <Text style={{ fontSize: 14, fontWeight: "700" }}>
             BMR Calculator
           </Text>
         </TouchableOpacity>
@@ -137,10 +146,32 @@ const styles = StyleSheet.create({
     marginTop: 50,
     height: 70,
     width: 250,
-    backgroundColor: "#026efd",
+    backgroundColor: "#394FD8",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 20,
+  },
+  buttonBmi: {
+    marginBottom: 70,
+    height: 40,
+    width: 100,
+    backgroundColor: "#394FD8",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+    marginTop: -50,
+    marginLeft: -125,
+  },  
+  buttonBmr: {
+    marginBottom: 70,
+    height: 40,
+    width: 110,
+    backgroundColor: "#394FD8",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+    marginTop: -110,
+    marginLeft: 145,
   },
   buttonDoctor: {
     marginTop: 30,
@@ -210,7 +241,5 @@ const styles = StyleSheet.create({
   quickText: {
     marginTop: 10,
     marginLeft: 20,
-
-
   },
 });
