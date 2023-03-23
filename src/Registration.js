@@ -41,7 +41,7 @@ const Registration = () => {
 
   return (
     <View style={StyleSheet.container}>
-      <Text style={{ fontWeight: "700", fontSize: 23, marginTop: 20 }}>
+      <Text style={{ fontWeight: "700", fontSize: 23,  marginTop: 40, marginLeft: 30 }}>
         Register Here!
       </Text>
       <View style={{marginTop:40}}>
@@ -90,31 +90,31 @@ export default Registration
 
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      alignItems: 'center',
-      marginTop: 100,
+    flex: 1,
+    alignItems: "center",
+    marginTop: 40,
+    backgroundColor: "#C0E8DA",
   },
 
   textInput: {
-      paddingTop: 20,
-      paddingBottom: 10,
-      width: 400,
-      fontSize: 20,
-      borderBottomWidth: 1,
-      borderBottomColor: '#000',
-      marginBottom: 10,
-      textAlign: 'center',
+    paddingTop: 20,
+    paddingBottom: 10,
+    width: 400,
+    fontSize: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: "#000",
+    marginBottom: 10,
+    textAlign: "center",
   },
 
   button: {
-      marginTop: 50,
-      height: 70,
-      width: 250,
-      backgroundColor: '#026efd',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderRadius: 50,
-      marginLeft: 75,
-  }
-
-})
+    marginTop: 50,
+    height: 70,
+    width: 250,
+    backgroundColor: "#026efd",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 50,
+    marginLeft: 75,
+  },
+});

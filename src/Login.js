@@ -8,7 +8,6 @@ import {
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { firebase } from "../config";
-import { BackgroundImage } from "react-native-elements/dist/config";
 
 const Login = () => {
   const navigation = useNavigation();
