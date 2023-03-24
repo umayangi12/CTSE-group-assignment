@@ -290,6 +290,66 @@ function App() {
           },
         }}
       />
+        <stack.Screen
+          name="aMedicine"
+          component={AddMedicine}
+          options={{
+            headerTitle: () => <Header name="Add medicine" />,
+            headerStyle: {
+              height: 150,
+              borderBottomLeftRadius: 50,
+              borderBottomRightRadius: 50,
+              backgroundColor: "#00e4d0",
+              shadowColor: "#000",
+              elevation: 25,
+            },
+          }}
+        />
+        <stack.Screen
+          name="medicineAll"
+          component={AllMedicine}
+          options={{
+            headerTitle: () => <Header name="Medicine" />,
+            headerStyle: {
+              height: 150,
+              borderBottomLeftRadius: 50,
+              borderBottomRightRadius: 50,
+              backgroundColor: "#00e4d0",
+              shadowColor: "#000",
+              elevation: 25,
+            },
+          }}
+        />
+        <stack.Screen
+          name="updateMedicine"
+          component={UpdateMedicine}
+          options={{
+            headerTitle: () => <Header name="Update medicine" />,
+            headerStyle: {
+              height: 150,
+              borderBottomLeftRadius: 50,
+              borderBottomRightRadius: 50,
+              backgroundColor: "#00e4d0",
+              shadowColor: "#000",
+              elevation: 25,
+            },
+          }}
+        />
+        <stack.Screen
+          name="aboutUs"
+          component={AboutUs}
+          options={{
+            headerTitle: () => <Header name="About Us" />,
+            headerStyle: {
+              height: 150,
+              borderBottomLeftRadius: 50,
+              borderBottomRightRadius: 50,
+              backgroundColor: "#00e4d0",
+              shadowColor: "#000",
+              elevation: 25,
+            },
+          }}
+        />
     </stack.Navigator>
   );
 
