@@ -140,11 +140,23 @@ const Dashboard = () => {
             BMR Calculator
           </Text>
         </TouchableOpacity>
+        <Text
+          style={{
+            fontSize: 13,
+            fontWeight: "700",
+            marginLeft: -270,
+            marginTop: -50,
+            marginBottom: -25,
+            color: "#687BF3",
+          }}
+        >
+          Get in touch
+        </Text>
         <TouchableOpacity
           onPress={() => navigation.navigate("ContactUs")}
-          style={styles.button}
+          style={styles.buttonContactUs}
         >
-          <Text style={{ fontSize: 22, fontWeight: "bold" }}>Contacts</Text>
+          <Text style={{ fontSize: 14, fontWeight: "bold" , textDecorationLine: "underline"}}>Contact Us</Text>
         </TouchableOpacity>
       </SafeAreaView>
     </ScrollView>
@@ -161,14 +173,15 @@ const styles = StyleSheet.create({
     marginTop: 50,
     backgroundColor: "#fff",
   },
-  button: {
-    marginTop: 50,
-    height: 70,
-    width: 250,
-    backgroundColor: "#394FD8",
+  buttonContactUs: {
+    marginTop: 30,
+    height: 30,
+    width: 100,
+    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 20,
+    marginRight: 200,
   },
   buttonBmi: {
     marginBottom: 70,

@@ -6,26 +6,26 @@ const ContactUs = () => {
   return (
     <View style={styles.container}>
 
-      <Text style={[styles.header]}>Lanka Hospitals Address</Text>
+      <Text style={[styles.header]}>Hospitals Address</Text>
       <Text style={styles.lightText}>
         No. 578, Elvitigala Mawatha, Narahenpita, Colombo 05, Sri Lanka
       </Text>
       <Text style={styles.header}>
-        Lanka Hospitals Administration Office Address
+        Hospitals Administration Office Address
       </Text>
       <Text style={styles.lightText}>
         No. 578, Elvitigala Mawatha, Narahenpita, Colombo 05, Sri Lanka
       </Text>
-      <Text style={styles.header}>Directions to Lanka Hospitals</Text>
+      <Text style={styles.header}>Directions to osour hospitals</Text>
       <Text style={styles.paraText}>
-        Lanka Hospitals is located between Park Road and Kirula Mawatha on the
+        Hospitals is located between Park Road and Kirula Mawatha on the
         Baseline Road, which is also known as Elvitigala Mawatha.
       </Text>
       <Text style={styles.lightText}>
         Emergency Hotline - 1566 / 011 553 0000
       </Text>
       <Text style={styles.lightText}>General Line - 011 543 0000</Text>
-      <Text style={styles.lightText}>Email -info@lankahospitals.com</Text>
+      <Text style={styles.lightText}>Email -info@abchospitals.com</Text>
       <MapView
         style={styles.map}
         initialRegion={{
