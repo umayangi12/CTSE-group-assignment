@@ -156,7 +156,29 @@ const Dashboard = () => {
           onPress={() => navigation.navigate("ContactUs")}
           style={styles.buttonContactUs}
         >
-          <Text style={{ fontSize: 14, fontWeight: "bold" , textDecorationLine: "underline"}}>Contact Us</Text>
+          <Text
+            style={{
+              fontSize: 14,
+              fontWeight: "bold",
+              textDecorationLine: "underline",
+            }}
+          >
+            Contact Us
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("AboutUs")}
+          style={styles.buttonAboutUs}
+        >
+          <Text
+            style={{
+              fontSize: 14,
+              fontWeight: "bold",
+              textDecorationLine: "underline",
+            }}
+          >
+            About Us
+          </Text>
         </TouchableOpacity>
       </SafeAreaView>
     </ScrollView>
@@ -181,7 +203,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 20,
-    marginRight: 200,
+    marginRight: 150,
+  },
+  buttonAboutUs: {
+    marginTop: -30,
+    height: 30,
+    width: 100,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+    marginRight: -130,
   },
   buttonBmi: {
     marginBottom: 70,
@@ -193,7 +225,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginTop: -50,
     marginLeft: -125,
-  },  
+  },
   buttonBmr: {
     marginBottom: 70,
     height: 40,

@@ -92,13 +92,13 @@ const UpdateMedicine = ({route}) => {
       />
       <Pressable onPress={()=>setShowDate(true)}>
         {/* <Text style={{ fontSize: 20, color: '#007AFF' }}>{date?`Exp date is ${date.toLocaleDateString()}`:"Select an expiration date"}</Text> */}
-        <DateTimePickerModal
+        {/* <DateTimePickerModal
             isVisible={showDate}
             mode="date"
             onConfirm={(date)=>{setDate(date);setShowDate(false)}}
             //onChange={(e)=>{setDate(e);setShowDate(false)}}
             onCancel={(e)=>setShowDate(false)}
-        />
+        /> */}
       </Pressable>
       <View style={styles.buttonView}>
           <TouchableOpacity

@@ -340,7 +340,7 @@ function App() {
           }}
         />
         <stack.Screen
-          name="aboutUs"
+          name="AboutUs"
           component={AboutUs}
           options={{
             headerTitle: () => <Header name="About Us" />,
