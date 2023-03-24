@@ -21,6 +21,10 @@ import Home from "./components/LabAppointments/Home";
 import NoteAdd from "./components/LabAppointments/NoteAdd";
 import Detail from "./components//LabAppointments/Detail";
 import AppointmentDash from "./components/AppointmentBooking/AppointmentDash";
+import AddMedicine from "./components/pharmacy/AddMedicine";
+import AllMedicine from "./components/pharmacy/AllMedicine";
+import UpdateMedicine from "./components/pharmacy/UpdateMedicine";
+import AboutUs from "./components/pharmacy/AboutUs";
 
 
 const stack = createStackNavigator();
