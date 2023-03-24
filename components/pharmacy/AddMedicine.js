@@ -105,16 +105,16 @@ const AddMedicine = () => {
         keyBoardType="numeric"
         style={styles.inputTitle}
       />
-      <Pressable onPress={()=>setShowDate(true)}>
+      {/* <Pressable onPress={()=>setShowDate(true)}> */}
         {/* <Text style={{ fontSize: 20, color: '#007AFF' }}>{date?`Exp date is ${date.toLocaleDateString()}`:"Select an expiration date"}</Text> */}
-        <DateTimePickerModal
+        {/* <DateTimePickerModal
             isVisible={showDate}
             mode="date"
-            onConfirm={(date)=>{setDate(date);setShowDate(false)}}
-            //onChange={(e)=>{setDate(e);setShowDate(false)}}
+            onConfirm={(date)=>{setDate(date);setShowDate(false)}} */}
+            {/* onChange={(e)=>{setDate(e);setShowDate(false)}}
             onCancel={(e)=>setShowDate(false)}
         />
-      </Pressable>
+      </Pressable> */}
       <TouchableOpacity
       style={styles.button}
       onPress={handleAdd}
