@@ -3,26 +3,13 @@ import React, { useState } from "react";
 import { firebase } from "../../config";
 import { Keyboard, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-//date picker
-
-
-
 
 const NoteAdd = () => {
   const navigation = useNavigation();
   const [testname, setTestname] = useState("");
   const [labpatientName, setlabPatientName] = useState("");
   const [age, setAge] = useState("");
-  //date picker
-
-
-  //date picker function
-
-  //finish function
-
-
-
-
+  
   const handleAdd = () => {
     if (!testname.trim()) {
       alert("Please Enter Test Name");
@@ -36,9 +23,6 @@ const NoteAdd = () => {
       alert("Please Enter Age");
       return;
     }
-    //date picker start
-  
-    // date picker end
     firebase
       .firestore()
       .collection("labAppointments")
@@ -51,9 +35,6 @@ const NoteAdd = () => {
         setlabPatientName("");
         setTestname("");
         setAge("");
-        //datepicker start
-      
-        //datepicker end
         Keyboard.dismiss();
         Alert.alert("Details Added Successfully");
         navigation.navigate("Home");
@@ -80,10 +61,7 @@ const NoteAdd = () => {
         value={age}
         onChangeText={(e) => setAge(e)}
         style={styles.inputTitle}
-      />
-      {/* Date Picker  Start*/}
-      
-      {/* Date Picker End */}
+      /> 
       <TouchableOpacity style={styles.button} onPress={handleAdd}>
         <Text style={styles.buttonText}>Add</Text>
       </TouchableOpacity>
@@ -97,23 +75,37 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "light-blue",
+    backgroundColor: "#A9B0E0",
   },
   inputTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginTop: 20,
+    fontSize: 14,
+    fontWeight: "700",
+    marginTop: 10,
     marginBottom: 10,
-    height: 50,
-    width: "97%",
+    height: 45,
+    width: "90%",
     borderBottomWidth: 1 / 2,
     borderLeftWidth: 1 / 2,
+    borderRightWidth: 1 / 2,
+    borderTopWidth: 1 / 2,
     padding: 10,
+    borderRadius: 7,
+    borderColor: "black",
+    backgroundColor: "#fff",
+    opacity: 0.7,
+  },
+  button: {
+    marginTop: 20,
+    height: 50,
+    width: 230,
+    backgroundColor: "#026efd",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
   },
   buttonText: {
     color: "black",
     fontSize: 22,
     fontWeight: "bold",
   },
-
 });

@@ -3,9 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { firebase } from "../../config";
 import { FlashList } from "@shopify/flash-list";
-//
 
-//
 
 const Home = () => {
   const navigation = useNavigation();
@@ -42,37 +40,10 @@ const Home = () => {
               </Text>
               <Text style={styles.testName}>Test Name: {item.TestName}</Text>
               <Text style={styles.age}>Age: {item.Age}</Text>
-              {/* date picker*/}
-
-              {/* date picker*/}
             </Pressable>
           </View>
         )}
       />
-      {/* <FlashList
-      data={appointments}
-      numColumns={2}
-      estimatedItemSize={100}
-      renderItem={({item})=>{
-        <View style={styles.noteView}>
-            <Pressable
-            onPress={()=>navigation.navigate('updateBooks',{item})}
-            >
-                <Text style={styles.labpatientName}>
-                    {item.labPatientName}
-                </Text>
-                <Text style={styles.testName}>
-                    {item.TestName}
-                </Text>
-                <Text style={styles.testName}>
-                    {item.Age}
-                </Text>
-            </Pressable>
-
-        </View>
-
-      }}
-      /> */}
       <Button
         title="Add Appointment"
         onPress={() => navigation.navigate("AddBook")}

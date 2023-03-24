@@ -10,7 +10,7 @@ const Detail = ({ route }) => {
   const [labpatientName, setlabPatientName] = useState(route.params.item.labPatientName);
   const [age, setAge] = useState(route.params.item.Age);
  
-//
+
   const Appointments = firebase.firestore().collection("labAppointments");
 
   const handleUpdate = () => {
@@ -45,11 +45,6 @@ const Detail = ({ route }) => {
 
   return (
     <View style={styles.container}>
-      {/* Navigation Starts */}
-
-      <Text onPress={() => navigation.navigate("Home")}>Detail Screen</Text>
-
-      {/* Navigation Ends */}
       {console.log(route.params.item.key)}
       <TextInput
         placeholder="Patient Name"
@@ -69,9 +64,7 @@ const Detail = ({ route }) => {
         onChangeText={(e) => setAge(e)}
         style={styles.inputTitle}
       />
-      {/* date picker */}
-
-      {/* date picker */}
+    
       <View style={styles.buttonView}>
         <TouchableOpacity style={styles.button} onPress={handleUpdate}>
           <Text style={styles.buttonText}>UPDATE</Text>
@@ -109,7 +102,7 @@ const styles = StyleSheet.create({
     width: "97%",
   },
   button: {
-    backgroundColor: "#000",
+    backgroundColor: "#026efd",
     padding: 10,
     borderRadius: 5,
     marginTop: 10,
