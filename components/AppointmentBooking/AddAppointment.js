@@ -105,8 +105,8 @@ const AddAppointment = () => {
           oonPress={handleAdd}
         /> */}
         <TouchableOpacity style={styles.button} onPress={handleAdd}>
-        <Text style={styles.buttonText}>BOOK</Text>
-      </TouchableOpacity>
+          <Text style={styles.buttonText}>BOOK</Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 1 / 2,
     padding: 10,
     borderRadius: 7,
-    borderColor: 'black',
+    borderColor: "black",
     backgroundColor: "#fff",
     opacity: 0.7,
   },
@@ -141,10 +141,18 @@ const styles = StyleSheet.create({
     color: "black",
     fontSize: 22,
     fontWeight: "800",
-   
   },
   scrollView: {
     backgroundColor: "#A9B0E0",
     marginHorizontal: -10,
+  },
+  button: {
+    marginTop: 5,
+    height: 40,
+    width: 210,
+    backgroundColor: "#026efd",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
   },
 });
