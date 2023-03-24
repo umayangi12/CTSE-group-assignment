@@ -11,7 +11,7 @@ import ViewAppointment from "./components/AppointmentBooking/ViewAppointment";
 import UpdateAppointment from "./components/AppointmentBooking/UpdateAppointment";
 import BmiCalculator from "./components/BmiCalculator";
 import BmrCalculator from "./components/BmrCalculator";
-import DoctorDash from "./components/Doctor/DoctorDash";
+import DoctorDash from "./components/Doctor/doctorDash";
 import DoctorAdd from "./components/Doctor/DoctorAdd";
 import DoctorDetails from "./components/Doctor/Doctordetails";
 import DoctorUD from "./components/Doctor/DoctorUD";
@@ -25,7 +25,7 @@ import AddMedicine from "./components/pharmacy/AddMedicine";
 import AllMedicine from "./components/pharmacy/AllMedicine";
 import UpdateMedicine from "./components/pharmacy/UpdateMedicine";
 import AboutUs from "./components/pharmacy/AboutUs";
-
+import AllAppointment from "./components/Doctor/Allappointment";
 
 const stack = createStackNavigator();
 
@@ -354,6 +354,17 @@ function App() {
             },
           }}
         />
+         <stack.Screen
+        component={AllAppointment}
+        name="AllAppointment"
+        options={{
+          headerTitle: () => <Header name="All Appointments" />,
+          headerStyle: {
+            backgroundColor: "#2A3A7D",
+            height: 150,
+          },
+        }}
+      />
     </stack.Navigator>
   );
 

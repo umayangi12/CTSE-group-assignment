@@ -93,6 +93,8 @@ const DoctorAdd = () => {
           <TextInput
             placeholder="Date"
             value={ddate}
+            inputMode="numeric"
+            keyBoardType="numeric"
             onChangeText={(e) => setDdate(e)}
             style={styles.inputTitle}
           />
@@ -100,6 +102,8 @@ const DoctorAdd = () => {
           <TextInput
             placeholder="Phone"
             value={phone}
+            inputMode="numeric"
+            keyBoardType="numeric"
             onChangeText={(e) => setPhone(e)}
             style={styles.inputTitle}
           />
@@ -113,7 +117,7 @@ const DoctorAdd = () => {
             placeholder="Prescriptions"
             value={med1}
             onChangeText={(e) => setMed1(e)}
-            style={styles.inputTitle}
+            style={styles.inputTitle1}
           />
           {/* <TextInput
         placeholder='Asprin'
@@ -175,6 +179,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     height: 50,
     width: 230,
+    marginBottom: 20,
     backgroundColor: "#026efd",
     alignItems: "center",
     justifyContent: "center",
@@ -186,5 +191,22 @@ const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: "#A9B0E0",
     marginHorizontal: -10,
+  },
+  inputTitle1: {
+    fontSize: 14,
+    fontWeight: "700",
+    marginTop: 20,
+    marginBottom: 10,
+    height: 70,
+    width: "90%",
+    borderBottomWidth: 1 / 2,
+    borderLeftWidth: 1 / 2,
+    borderRightWidth: 1 / 2,
+    borderTopWidth: 1 / 2,
+    padding: 10,
+    borderRadius: 7,
+    borderColor: "black",
+    backgroundColor: "#fff",
+    opacity: 0.7,
   },
 });

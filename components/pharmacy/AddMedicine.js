@@ -4,7 +4,6 @@ import { useNavigation } from '@react-navigation/native';
 import {firebase} from '../../config'
 import { Keyboard,StyleSheet } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
-import DateTimePickerModal from 'react-native-modal-datetime-picker'
 
 const AddMedicine = () => {
     const navigation=useNavigation();

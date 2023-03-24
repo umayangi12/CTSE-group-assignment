@@ -22,7 +22,7 @@ const DoctorDash = () => {
           </View>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate("")}
+            onPress={() => navigation.navigate("AllAppointment")}
             style={styles.buttonApp}
           >
             <Text style={{ fontSize: 14, fontWeight: "bold" }}>Appoiments</Text>

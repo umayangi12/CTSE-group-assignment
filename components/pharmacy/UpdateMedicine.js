@@ -4,7 +4,6 @@ import {firebase} from '../../config'
 import { useNavigation } from '@react-navigation/native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import DropDownPicker from 'react-native-dropdown-picker';
-import DateTimePickerModal from 'react-native-modal-datetime-picker'
 
 const UpdateMedicine = ({route}) => {
   const navigation=useNavigation();
