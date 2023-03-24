@@ -11,7 +11,7 @@ import ViewAppointment from "./components/AppointmentBooking/ViewAppointment";
 import UpdateAppointment from "./components/AppointmentBooking/UpdateAppointment";
 import BmiCalculator from "./components/BmiCalculator";
 import BmrCalculator from "./components/BmrCalculator";
-import DoctorDash from "./components/Doctor/doctorDash";
+import DoctorDash from "./components/Doctor/DoctorDash";
 import DoctorAdd from "./components/Doctor/DoctorAdd";
 import DoctorDetails from "./components/Doctor/Doctordetails";
 import DoctorUD from "./components/Doctor/DoctorUD";
