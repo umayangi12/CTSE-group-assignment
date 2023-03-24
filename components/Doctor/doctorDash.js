@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView } from 'react-native'
 //import React,{useState,useEffect} from 'react'
 import { useNavigation } from '@react-navigation/native'
 import DocAppointmentCard from './DocAppointmentCard';
@@ -14,7 +14,7 @@ const DoctorDash = () => {
       <View>
         <Image
           style={styles.image}
-          source={require("../../assets/doctordash.jpg")}
+          source={require("../../assets/docDashPic.jpg")}
         />
         <View style={styles.container}>
           <View>
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    marginTop: 10,
+    marginTop: -20,
     backgroundColor: "",
   },
   button: {
@@ -95,17 +95,24 @@ const styles = StyleSheet.create({
   },
   buttonDetails: {
     marginTop: 120,
-    height: 40,
+    height: 20,
     width: 150,
     backgroundColor: "#394FD8",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
-    marginRight: -0,
+    marginRight: -10,
   },
   image: {
     resizeMode: "cover",
-    height: 200,
+    height: 360,
     width: 400,
+    borderBottomLeftRadius: 90,
+    borderBottomRightRadius: 90,
+    marginTop: -30,
+  },
+  scrollView: {
+    backgroundColor: "#fff",
+    marginHorizontal: -10,
   },
 });
