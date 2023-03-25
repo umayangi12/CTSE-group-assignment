@@ -16,7 +16,7 @@ const ContactUs = () => {
       <Text style={styles.lightText}>
         No. 578, Elvitigala Mawatha, Narahenpita, Colombo 05, Sri Lanka
       </Text>
-      <Text style={styles.header}>Directions to osour hospitals</Text>
+      <Text style={styles.header}>Directions to our hospitals</Text>
       <Text style={styles.paraText}>
         Hospitals is located between Park Road and Kirula Mawatha on the
         Baseline Road, which is also known as Elvitigala Mawatha.
