@@ -27,7 +27,7 @@ const AllMedicine = () => {
     <View style={styles.container}>
     <FlashList
     data={pharmacy}
-    numColumns={2}
+    numColumns={1}
     estimatedItemSize={100}
     renderItem={({item})=>(
           <View style={styles.noteView}>
@@ -62,17 +62,22 @@ const styles=StyleSheet.create({
       shadowOffset:{width:10,height:2},
       shadowOpacity:0.8,
       shadowRadius:2,
+
       elevation:7,
-      alignItems:'center'
+      alignItems:'center',
+      opacity:0.8
   },
   bookName: {
       fontSize: 16,
+      fontWeight: "bold",
   },
   bookAuthor: {
       fontSize: 16,
+      fontWeight: "bold",
   },
   bookPrice: {
       fontSize: 16,
+      fontWeight: "bold",
   },
 })
 

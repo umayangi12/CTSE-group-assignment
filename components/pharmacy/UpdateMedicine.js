@@ -62,18 +62,7 @@ const UpdateMedicine = ({route}) => {
         onChangeText={(e)=>setMedicineName(e)}
         style={styles.inputTitle}
       />
-      <View style={styles.dropDownType}>
-        <DropDownPicker
-        open={open}
-        items={types}
-        defaultValue={type}
-        setOpen={setOpen}
-        value={type}
-        containerStyle={{ height: 40 }}
-        //setValue={setType}
-        onSelectItem={(e)=>{setType(e.value);setOpen(false)}}
-        />
-      </View>
+     
       <TextInput
         placeholder='Quantity'
         value={quantity}
@@ -90,7 +79,7 @@ const UpdateMedicine = ({route}) => {
         keyBoardType="numeric"
         style={styles.inputTitle}
       />
-      <Pressable onPress={()=>setShowDate(true)}>
+      {/* <Pressable onPress={()=>setShowDate(true)}> */}
         {/* <Text style={{ fontSize: 20, color: '#007AFF' }}>{date?`Exp date is ${date.toLocaleDateString()}`:"Select an expiration date"}</Text> */}
         {/* <DateTimePickerModal
             isVisible={showDate}
@@ -99,7 +88,21 @@ const UpdateMedicine = ({route}) => {
             //onChange={(e)=>{setDate(e);setShowDate(false)}}
             onCancel={(e)=>setShowDate(false)}
         /> */}
-      </Pressable>
+      {/* </Pressable> */}
+
+      <View style={styles.dropDownType}>
+        <DropDownPicker
+        open={open}
+        items={types}
+        defaultValue={type}
+        setOpen={setOpen}
+        value={type}
+        containerStyle={{ height: 40 }}
+        //setValue={setType}
+        onSelectItem={(e)=>{setType(e.value);setOpen(false)}}
+        />
+      </View>
+
       <View style={styles.buttonView}>
           <TouchableOpacity
             style={styles.button}
@@ -124,20 +127,26 @@ export default UpdateMedicine
 
 const styles=StyleSheet.create({
   container:{
-      flex:1,
-      alignItems:'center',
-      backgroundColor:'#c9f5d9'
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#A9B0E0",
   },
-  inputTitle:{
-      fontSize:18,
-      fontWeight:'bold',
-      marginTop:20,
-      marginBottom:10,
-      height:50,
-      width:'97%',
-      borderWidth:1,
-      borderRadius:5,
-      padding:10
+  inputTitle: {
+    fontSize: 14,
+    fontWeight: "700",
+    marginTop: 20,
+    marginBottom: 10,
+    height: 45,
+    width: "90%",
+    borderBottomWidth: 1 / 2,
+    borderLeftWidth: 1 / 2,
+    borderRightWidth: 1 / 2,
+    borderTopWidth: 1 / 2,
+    padding: 10,
+    borderRadius: 7,
+    borderColor: "black",
+    backgroundColor: "#fff",
+    opacity: 0.7,
   },
   buttonView:{
       flexDirection:'row',
@@ -148,11 +157,23 @@ const styles=StyleSheet.create({
       backgroundColor:'#000',
       padding:10,
       borderRadius:5,
-      marginTop:10
+      marginTop:250
   },
   buttonText:{
       color:'#fff',
       fontSize:18
+  },
+  dropDownType: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingTop: 20,
+    paddingBottom: 0,
+    height: 45,
+    width: "93%",
+    opacity: 0.7,
+
   }
 
 
