@@ -85,6 +85,8 @@ const AddAppointment = () => {
           value={patientPhone}
           onChangeText={(e) => setPatientPhone(e)}
           style={styles.inputTitle}
+          inputMode="numeric"
+          keyBoardType="numeric"
         />
         <TextInput
           placeholder="NIC/Passport No *"
