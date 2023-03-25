@@ -82,7 +82,7 @@ const Login = () => {
         <Text style={{ fontWeight: "700", fontSize: 22 }}>Login</Text>
       </TouchableOpacity>
       <Text style={styles.error}>{emailError}</Text>
-      <Text style={styles.error}>{passwordError}</Text>
+      {/* <Text style={styles.error}>{passwordError}</Text> */}
       <TouchableOpacity
         onPress={() => navigation.navigate("Registration")}
         style={{ marginTop: 20 }}

@@ -7,6 +7,27 @@ const Registration = () => {
   const [password, setPassword] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+
+  //validate email and password
+  const validate = () => {
+    if (!email.includes("@")) {
+      setEmailError("Invalid Email");
+    } else if (password.length < 4) {
+      setPasswordError("Password must be at least 4 characters");
+    } else if (email.length === 0) {
+      setEmailError("Email is required!");
+    } else if (email.indexOf(" ") >= 0) {
+      setEmailError("Email cannot contain spaces");
+    } else if (password.indexOf(" ") >= 0) {
+      setPasswordError("Password cannot contain spaces");
+    } else {
+      setEmailError("");
+      setPasswordError("");
+    }
+  };
+
 
   registerUser = async (email, password, firstName, lastName) => {
     await firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -41,47 +62,60 @@ const Registration = () => {
 
   return (
     <View style={StyleSheet.container}>
-      <Text style={{ fontWeight: "700", fontSize: 23,  marginTop: 40, marginLeft: 30 }}>
+      <Text
+        style={{
+          fontWeight: "700",
+          fontSize: 23,
+          marginTop: 40,
+          marginLeft: 30,
+        }}
+      >
         Register Here!
       </Text>
-      <View style={{marginTop:40}}>
+      <View style={{ marginTop: 40 }}>
         <TextInput
-        style={styles.textInput}
-        placeholder="First Name"
-        onChangeText={(firstName) => setFirstName(firstName)}
-        autoCorrect={false}>
-        </TextInput>
+          style={styles.textInput}
+          placeholder="First Name"
+          onChangeText={(firstName) => setFirstName(firstName)}
+          autoCorrect={false}
+        ></TextInput>
         <TextInput
-        style={styles.textInput}
-        placeholder="Last Name"
-        onChangeText={(lastName) => setLastName(lastName)}
-        autoCorrect={false}>
-        </TextInput>
+          style={styles.textInput}
+          placeholder="Last Name"
+          onChangeText={(lastName) => setLastName(lastName)}
+          autoCorrect={false}
+        ></TextInput>
         <TextInput
-        style={styles.textInput}
-        placeholder="Email"
-        onChangeText={(email) => setEmail(email)}
-        autoCapitalize="none"
-        autoCorrect={false}
-        keyboardType="email-address">
-        </TextInput>
+          style={styles.textInput}
+          placeholder="Email"
+          onChangeText={(email) => setEmail(email)}
+          autoCapitalize="none"
+          autoCorrect={false}
+          keyboardType="email-address"
+        ></TextInput>
         <TextInput
-        style={styles.textInput}
-        placeholder="Password"
-        onChangeText={(password) => setPassword(password)}
-        autoCapitalize="none"
-        autoCorrect={false}
-        secureTextEntry={true}>
-        </TextInput>
-
+          style={styles.textInput}
+          placeholder="Password"
+          onChangeText={(password) => setPassword(password)}
+          autoCapitalize="none"
+          autoCorrect={false}
+          secureTextEntry={true}
+        ></TextInput>
       </View>
       <TouchableOpacity
-      onPress={() => registerUser(email, password, firstName, lastName)}
-      style={styles.button}>
-        <Text style={{fontWeight:"700", fontSize: 22}}>Register</Text>
+        onPress={() =>
+          registerUser(email, password, firstName, lastName) && validate()
+        }
+        style={styles.button}
+      >
+        <Text style={{ fontWeight: "700", fontSize: 22 }}>Register</Text>
       </TouchableOpacity>
+      <View style={styles.error}>
+        <Text style={styles.error}>{emailError}</Text>
+        {/* <Text style={styles.error}>{passwordError}</Text> */}
+      </View>
     </View>
-  )
+  );
 
 
 }
@@ -116,5 +150,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 15,
     marginLeft: 35,
+  },
+  error: {
+    color: "#D32F2F",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10,
   },
 });
