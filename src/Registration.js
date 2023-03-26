@@ -28,6 +28,7 @@ const Registration = () => {
     }
   };
 
+  //user register
   registerUser = async (email, password, firstName, lastName) => {
     await firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(() => {
@@ -41,7 +42,7 @@ const Registration = () => {
             alert(error.message)
           })
           .then(() => {
-            firebase.firestore().collection('users')
+            firebase.firestore().collection('users') //store the user details in the users collection
               .doc(firebase.auth().currentUser.uid)
               .set({
                 firstName,

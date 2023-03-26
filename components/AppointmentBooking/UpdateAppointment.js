@@ -8,6 +8,8 @@ import AppointmentCard from "./AppointmentCard";
 
 const UpdateAppointment = ({ route }) => {
   const navigation = useNavigation();
+
+  // set up state variables for each of the patient details
   const [patientTite, setPatientTite] = useState(
     route.params.item.PatientTitle
   );
@@ -17,9 +19,10 @@ const UpdateAppointment = ({ route }) => {
   );
   const [patientnic, setPatientnic] = useState(route.params.item.Patientnic);
   const [patientArea, setPatientArea] = useState(route.params.item.PatientArea);
-  const Appointments = firebase.firestore().collection("Appointments");
+  const Appointments = firebase.firestore().collection("Appointments"); //reference to the "Appointments" collection
 
   const handleUpdate = () => {
+    //validates whether variable is not empty and has a length greater than 0 using a conditional statement
     if (patientTite && patientTite.length > 0) {
       Appointments.doc(route.params.item.key)
         .update({
@@ -30,14 +33,14 @@ const UpdateAppointment = ({ route }) => {
           PatientArea: patientArea,
         })
         .then(() => {
-          Alert.alert("Appointment Updated Successfully!");
+          Alert.alert("Appointment Updated Successfully!"); //alert message
           navigation.navigate("ViewAppointment");
         })
         .catch((e) => alert(e));
     }
   };
 
-  //handle delete
+  //handle delete function
   const handleDelete = () => {
     Appointments.doc(route.params.item.key)
       .delete()
