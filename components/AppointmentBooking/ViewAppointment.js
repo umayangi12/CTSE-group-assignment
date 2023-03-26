@@ -17,8 +17,9 @@ const ViewAppointment = () => {
   const [appointments, setAppointments] = useState([]);
   const Appointments = firebase.firestore().collection("Appointments");
 
+  //set up a subscription to the Appointments collection
   useEffect(() => {
-    const appointmentSubsc = Appointments.onSnapshot((querysnapshot) => {
+    const appointmentSubsc = Appointments.onSnapshot((querysnapshot) => { // real-time listener
       const appointments = [];
       querysnapshot.forEach((docSnapshot) => {
         appointments.push({
@@ -64,7 +65,7 @@ const ViewAppointment = () => {
       />
       <Button
         title="Add Appointment"
-        onPress={() => navigation.navigate("AddAppointment")}
+        onPress={() => navigation.navigate("AddAppointment")} //navigate to AddAppointment
       />
     </BackgroundImage>
   );

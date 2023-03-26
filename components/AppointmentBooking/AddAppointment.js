@@ -20,6 +20,7 @@ const AddAppointment = () => {
   const [patientnic, setPatientnic] = useState("");
   const [patientArea, setPatientArea] = useState("");
 
+  //empty field validation
   const handleAdd = () => {
     if (!patientTite.trim()) {
       alert("Please enter a title");
@@ -41,6 +42,8 @@ const AddAppointment = () => {
       alert("Please enter the city");
       return;
     }
+
+    //adding new document to the Appointments collection
     firebase
       .firestore()
       .collection("Appointments")
@@ -51,6 +54,8 @@ const AddAppointment = () => {
         Patientnic: patientnic,
         PatientArea: patientArea,
       })
+
+      //Promise-based method call
       .then(() => {
         setPatientTite("");
         setPatientName("");
@@ -58,8 +63,8 @@ const AddAppointment = () => {
         setPatientnic("");
         setPatientArea("");
         Keyboard.dismiss();
-        Alert.alert("Appointment Booked Successfully!");
-        navigation.navigate("ViewAppointment");
+        Alert.alert("Appointment Booked Successfully!"); //success message
+        navigation.navigate("ViewAppointment"); //navigate to view appointment page
       })
       .catch((e) => alert(e));
   };

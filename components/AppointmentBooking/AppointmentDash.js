@@ -3,10 +3,6 @@ import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import AppBookCard from "./AppBookCard";
 import AppAllDetailCard from "./AppAllDetailsCard";
-// import DocAppointmentCard from "./DocAppointmentCard";
-// import DocPatientCheckCard from "./DocPatientCheckCard";
-// import DocAllDetailsCard from "./DocAllDetailsCard";
-//import { firebase } from '../config'
 
 const AppointmentDash = () => {
   const navigation = useNavigation();
@@ -15,11 +11,12 @@ const AppointmentDash = () => {
     <View>
       <Image
         style={styles.image}
-        source={require("../../assets/appDash.jpg")}
+        source={require("../../assets/appDash.jpg")} //dashboard image 
       />
       <View style={styles.container}>
         <View>
-          <AppBookCard />
+          {/* appointment booking card */}
+          <AppBookCard /> 
         </View>
 
         <TouchableOpacity
@@ -29,11 +26,12 @@ const AppointmentDash = () => {
           <Text style={{ fontSize: 14, fontWeight: "bold" }}>Booking</Text>
         </TouchableOpacity>
         <View>
+          {/* appointment booking details card */}
             <AppAllDetailCard/>
         </View>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate("ViewAppointment")}
+          onPress={() => navigation.navigate("ViewAppointment")} //navigating to the view appointment screen
           style={styles.buttonDetails}
         >
           <Text style={{ fontSize: 14, fontWeight: "bold" }}>All Details</Text>

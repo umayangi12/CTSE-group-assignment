@@ -8,6 +8,7 @@ const BmiCalculator = () => {
     const [description, setDescription] = useState('')
 
     const calculateBmi = () => {
+      //bmi calcualtion formula
         const bmi = weight / ((height/100) * (height/100))
         setBmi(bmi.toFixed(1))
 
@@ -44,7 +45,9 @@ const BmiCalculator = () => {
           <Text style={styles.buttonText}>Calculate</Text>
         </TouchableOpacity>
         <View style={styles.resultview}>
+          {/* Display the bmi value */}
             <Text style={styles.result}>BMI = {bmi}</Text>
+          {/* Display the bmi result */}
             <Text style={styles.result}>{description}</Text>
 
         </View>
