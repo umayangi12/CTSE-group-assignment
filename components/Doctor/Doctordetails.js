@@ -10,20 +10,7 @@ const DoctorDetails = () => {
   const [doctor, setDoctor] = useState([]);
   const Doctor = firebase.firestore().collection("Doctor");
 
-  // useEffect(()=>{
-  //     Books
-  //     .orderBy('createdAt','desc')
-  //     .onSnapshot((querySnapshot)=>{
-  //         const books=[];
-  //         querySnapshot.forEach((doc)=>{
-  //             const {BookName,Author,Price}=doc.data();
-  //             books.push({BookName,Author,Price,id:doc.id})
-  //         });
-  //         setBooks(books);
-  //         console.log({...books})
-  //     });
-
-  // },[])
+    //set up a subscription to the Appointments collection
   useEffect(() => {
     const DoctorSubsc = Doctor.onSnapshot((querysnapshot) => {
       const doctor = [];
@@ -62,30 +49,6 @@ const DoctorDetails = () => {
           </View>
         )}
       />
-      {/* <FlashList
-      data={books}
-      numColumns={2}
-      estimatedItemSize={100}
-      renderItem={({item})=>{
-        <View style={styles.noteView}>
-            <Pressable
-            onPress={()=>navigation.navigate('updateBooks',{item})}
-            >
-                <Text style={styles.bookName}>
-                    {item.BookName}
-                </Text>
-                <Text style={styles.bookAuthor}>
-                    {item.Author}
-                </Text>
-                <Text style={styles.bookAuthor}>
-                    {item.Price}
-                </Text>
-            </Pressable>
-
-        </View>
-
-      }}
-      /> */}
       <Button
         title="Patient Checking"
         onPress={() => navigation.navigate("DoctorAdd")}

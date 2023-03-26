@@ -28,7 +28,6 @@ const Registration = () => {
     }
   };
 
-
   registerUser = async (email, password, firstName, lastName) => {
     await firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(() => {

@@ -19,6 +19,7 @@ const DoctorAdd = () => {
     //   const [med3,setMed3]=useState('');
     //   const [med4,setMed4]=useState('');
 
+      //empty field validation
     const handleAdd = () => {
         if (!paname.trim()) {
             alert('Please Enter Patient Name');
@@ -44,6 +45,8 @@ const DoctorAdd = () => {
             alert('Please Enter Prescription');
             return;
         }
+
+            //adding new document to the Appointments collection
         firebase.firestore()
             .collection('Doctor')
             .add({
@@ -57,6 +60,7 @@ const DoctorAdd = () => {
                 // Med3:med3,
                 // Med4:med4
             })
+                  //Promise-based method call
             .then(() => {
                 setPaname('')
                 setDiagnose('')
