@@ -11,7 +11,7 @@ const DoctorAdd = () => {
     const navigation = useNavigation();
     const [paname, setPaname] = useState('');
     const [diagnose, setDiagnose] = useState('');
-    const [ddate, setDdate] = useState('');
+    const [ddate, setDdate] = useState(new Date().toLocaleDateString());
     const [phone, setPhone] = useState('');
     const [dname, setDname] = useState('');
     const [med1, setMed1] = useState('');
